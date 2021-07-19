@@ -1,2 +1,2 @@
-# Team_Evants
-Team Evants App - Intern's Project
+# Team_Events
+Team Events App - Intern's Project
