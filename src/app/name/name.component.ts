@@ -1,18 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-name',
   templateUrl: './name.component.html',
   styleUrls: ['./name.component.scss']
 })
-export class NameComponent implements OnInit {
+export class NameComponent {
   communicate: string | undefined;
-  constructor() { }
-
-  ngOnInit(): void {
-  }
   hello(value: string) {
     this.communicate = 'Hi, ' + value;
   }
-
 }
