@@ -20,9 +20,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Running end-to-end tests
 
-**Installing cypress:** in case you haven't installed it before, use the command `npm install --save-dev cypress`.\
-**Opening cypress:** use the command `npm run e2e:open`.\
-**Running cypress tests:** use the command `npm run e2e:run`.
+**Installing dependencies:** in case you haven't installed them before, use the command `npm install`.\
+**Running Angular app:** use the command `ng serve`\
+**Opening cypress:** -> Opening cypress to run selected test: use the command `npm run e2e:open`.\
+**Running cypress tests:** -> Running all cypress tests in terminal: use the command `npm run e2e:run`.
 
 ## Further help
 
