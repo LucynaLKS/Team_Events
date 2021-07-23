@@ -50,6 +50,13 @@ jobs:
           path: ./node_modules
           key: modules-${{ hashFiles('package-lock.json') }}
 
+      - name: Cache Cypress Binary
+        id: cache-cypress-binary
+        uses: actions/cache@v2
+        with:
+          path: cypress/cache
+          key: cypress-binary-${{ hashFiles('package-lock.json') }}
+
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci --ignore-scripts
