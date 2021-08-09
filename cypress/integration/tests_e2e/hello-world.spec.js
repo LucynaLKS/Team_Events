@@ -17,4 +17,12 @@ describe("Hello World", () => {
 
     cy.get("app-name").should("contain", "Hi, Mieszko");
   });
+
+  it("The name shouldn't appear on the scree", () => {
+    cy.get('[data-test="input_name"]');
+
+    cy.get("[data-test=button]").click();
+
+    cy.get("app-name").should("contain", "Hi,");
+  })
 });
