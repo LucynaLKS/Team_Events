@@ -43,3 +43,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Screeenshot cypress
+/cypress/screeenshots
+/cypress/videos
