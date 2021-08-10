@@ -22,9 +22,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Run application in Docker
 
 **Instal docker** if You have Docker instaled - Skip this step - Instal Docker from [Docker](https://www.docker.com/get-started) site and run it.\
-**Make Image from Dockerfile** Run `docker build -t <YOUR IMAGE NAME> .` to create image from Dockerfile.\
-**Run container** Open Docker desktop, navigate to images, choose your image and click 'run', in optional settings you can add name of container and exact port.\
-**Opening app in container** In Docker desktop navigate to Containers/Apps, choose your container and click 'Open in browser'.
+**Make Image from Dockerfile** Run `docker build -t <you-image-tag> .` to create image from Dockerfile.\
+**Run container** Run `docker run -d -p 8080:80 <you-image-tag>` to start container.\
+**Opening app in container** Go to browser and type `http://localhost:8080/`.
 
 ## Running unit tests
 
