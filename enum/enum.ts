@@ -1,4 +1,4 @@
-enum TeamEvents {
+export enum TeamEvents {
     Activity,
     Dance,
     Drink,

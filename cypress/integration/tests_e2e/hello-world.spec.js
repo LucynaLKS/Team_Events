@@ -11,11 +11,11 @@ describe("Hello World", () => {
   });
 
   it("The name should appear on the screen", () => {
-    cy.get('[data-test="input_name"]').type("Mieszko");
+    cy.get('[data-test="input_name"]').type("Kuba");
 
     cy.get("[data-test=button]").click();
 
-    cy.get("app-name").should("contain", "Hi, Mieszko");
+    cy.get("app-name").should("contain", "Hi, Kuba");
   });
 
   it("The name shouldn't appear on the scree", () => {
