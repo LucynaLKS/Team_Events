@@ -1,0 +1,232 @@
+[
+  {
+    "Id": 1,
+    "Name": "Quest Cage Escape Room",
+    "Address": "Katowice, ul. 3 Maja 6-8 lok. 3",
+    "Phone": "731 403 30",
+    "Link": "https://questcage.pl",
+    "Max_persons": "10",
+    "Tag": "Activity",
+    "Description": "Escape rooms, zwane również pokojami zagadek - miejsce, w którym poczujesz się, jak bohater. Jest to dziedzina rozrywki, która zapewnia niezapomniane przeżycia i stanowi świetną formę spędzania czasu. Każdy pokój to inna historia osadzona w konkretnej kategorii, którą można dobrać do własnych preferencji."
+  },
+  {
+    "Id": 2,
+    "Name": "Quest Cage Escape Room",
+    "Address": "Katowice, Dębowa 65/5",
+    "Phone": "794 780 888",
+    "Link": "https://questcage.pl",
+    "Max_persons": "10",
+    "Tag": "Activity",
+    "Description": "Escape rooms, zwane również pokojami zagadek - miejsce, w którym poczujesz się, jak bohater. Jest to dziedzina rozrywki, która zapewnia niezapomniane przeżycia i stanowi świetną formę spędzania czasu. Każdy pokój to inna historia osadzona w konkretnej kategorii, którą można dobrać do własnych preferencji."
+  },
+  {
+    "Id": 3,
+    "Name": "Next Room Katowice",
+    "Address": "Katowice, ul. Sowińskiego 5A",
+    "Phone": "733 100 229",
+    "Link": "http://nextescaperoom.pl",
+    "Max_persons": "6",
+    "Tag": "Activity",
+    "Description": "Escape rooms, zwane również pokojami zagadek - miejsce, w którym poczujesz się, jak bohater. Jest to dziedzina rozrywki, która zapewnia niezapomniane przeżycia i stanowi świetną formę spędzania czasu. Każdy pokój to inna historia osadzona w konkretnej kategorii, którą można dobrać do własnych preferencji."
+  },
+  {
+    "Id": 4,
+    "Name": "Centrum Rozrywki Grawitacja",
+    "Address": "Katowice, Gliwicka 44",
+    "Phone": "(32) 359 59 81",
+    "Link": "http://www.gravitacja.pl/start-katowice",
+    "Max_persons": "12",
+    "Tag": "Activity, Drink, Food",
+    "Description": "Kręgle, Bilard, Spotkania towarzyskie"
+  },
+  {
+    "Id": 5,
+    "Name": "Club Garage",
+    "Address": "Katowice, Dąbrówki 10",
+    "Phone": "502-483-920",
+    "Link": "https://clubgarage.pl",
+    "Max_persons": "400",
+    "Tag": "Activity, Dance, Drink, Food",
+    "Description": "Garage to Klub Muzyczny, Klub Bilardowy i Kręgielnia w jednym miejscu! Nowoczesny kompleks dla wymagających klubowiczów."
+  },
+  {
+    "Id": 6,
+    "Name": "Silesian Museum",
+    "Address": "Katowice, Tadeusza Dobrowolskiego 1",
+    "Phone": "32 779 93 00",
+    "Link": "https://muzeumslaskie.pl/pl/",
+    "Max_persons": "150",
+    "Tag": "Museum",
+    "Description": "Muzeum Śląskie jest muzeum regionalnym, instytucją kultury współprowadzoną przez Urząd Marszałkowski Województwa Śląskiego i Ministerstwo Kultury, Dziedzictwa Narodowego i Sportu."
+  },
+  {
+    "Id": 7,
+    "Name": "JumpWorld",
+    "Address": "Katowice, Pszczynska 6",
+    "Phone": "572 955 975",
+    "Link": "https://www.jumpworld.pl/pl/katowice/",
+    "Max_persons": "80",
+    "Tag": "Activity",
+    "Description": "Największa sieć Parków trampolin w Polsce. Posiada różne strefy takie jak strefa ogólna, strefa siatkówki, basketu, dodgeball, tor przeszkód itp."
+  },
+  {
+    "Id": 8,
+    "Name": "Laserhouse",
+    "Address": "Katowice, Kamienna 9",
+    "Phone": "(32) 229 00 21",
+    "Link": "https://laserhouse.pl/",
+    "Max_persons": "20",
+    "Tag": "Activity",
+    "Description": "Laserowe Centrum Rozrywki"
+  },
+  {
+    "Id": 9,
+    "Name": "Museum of Computer and Information Technology",
+    "Address": "Katowice, Oddziałów Młodzieży Powstańczej 1",
+    "Phone": "32 4130890",
+    "Link": "http://www.muzeumkomputerow.edu.pl/",
+    "Max_persons": "35",
+    "Tag": "Museum",
+    "Description": "Odwiedzając nasze wystawy, przeżyją Państwo niebywałą podróż w czasie - nasza ekspozycja przeniesie Was w czasie o ponad 40 lat w przeszłość. Trzeba jednak zdawać sobie sprawę, że 40 lat w Informatyce to kilka wieków w Architekturze."
+  },
+  {
+    "Id": 10,
+    "Name": "JUMPCITY",
+    "Address": "Katowice, Kościuszki 227",
+    "Phone": "(32) 781 88 84",
+    "Link": "https://katowice.jumpcity.pl",
+    "Max_persons": "100",
+    "Tag": "Activity, Food",
+    "Description": "JUMPCITY to największy park trampolin na Śląsku! Posiadamy olbrzymi basen z gąbkami, największą trampolinę sportową na południu Polski, ścieżki akrobatyczne, trampoliny z koszami do ćwiczenia wsadów, arenę do zbijaka, strefę gladiatorów i specjalną strefę dla najmłodszych"
+  },
+  {
+    "Id": 11,
+    "Name": "Flyspot - Katowice Indoor Skydiving",
+    "Address": "Katowice, Chorzowska 100",
+    "Phone": "698 626 500",
+    "Link": "https://www.flyspot.com/pl/",
+    "Max_persons": "10",
+    "Tag": "Activity",
+    "Description": "Flyspot to najlepszy wybór na nietuzinkowy event. Stworzyliśmy miejsce, które łączy profesjonalizm z zabawą w dobrym stylu. Spełnianie marzeń o lataniu, sportowa rywalizacja, ekstremalne emocje."
+  },
+  {
+    "Id": 12,
+    "Name": "Vinoteka",
+    "Address": "Katowice, Wawelska 2",
+    "Phone": "790 212 592",
+    "Link": "https://vinotekakatowice.business.site",
+    "Max_persons": "40",
+    "Tag": "Drink, Food",
+    "Description": "Winiarnia - ogromny wybór przepysznych win i świetny klimat, który urzeka każdego klienta."
+  },
+  {
+    "Id": 13,
+    "Name": "Cybermachina",
+    "Address": "Katowice, Św. Jana 10",
+    "Phone": "618 121 193",
+    "Link": "http://cybermachina.pl",
+    "Max_persons": "100",
+    "Tag": "Drink, Activity",
+    "Description": "Cybermachina to bar dla graczy od graczy. Możesz zagrać u nas na konsoli, w planszówkę, napić się mikstury życia lub smoczego piwa. Organizujemy turnieje, geekowe quizy, cosplay party, spotkania branżowe i naprawdę wiele, wiele więcej."
+  },
+  {
+    "Id": 14,
+    "Name": "Squashok",
+    "Address": "Katowice, Wiązowa 5",
+    "Phone": "327337867",
+    "Link": "https://squashok.pl/",
+    "Max_persons": "20",
+    "Tag": "Activity",
+    "Description": "Największy i najlepszy punkt SQUASHA na Śląsku"
+  },
+  {
+    "Id": 15,
+    "Name": "Komenda Wojewódzka Policji w Katowicach",
+    "Address": "Katowice, Lompy 19",
+    "Phone": "997 / 478512222",
+    "Link": "https://slaska.policja.gov.pl/",
+    "Max_persons": "100",
+    "Tag": "Activity, Drink",
+    "Description": "Klimatyczne miejsce gdzie można porozmawiać z ciekawymi ludźmi i dowiedzieć się więcej o najbardziej szanowanym zawodzie świata"
+  },
+  {
+    "Id": 16,
+    "Name": "Sztauwajery",
+    "Address": "Katowice, Pułaskiego 71",
+    "Phone": "-",
+    "Link": "https://www.facebook.com/sztauwajery/",
+    "Max_persons": "50",
+    "Tag": "Drink, Food",
+    "Description": "Ogródek piwny przy stawie z okazjonalną muzyką na żywo."
+  },
+  {
+    "Id": 17,
+    "Name": "Basen Brynów",
+    "Address": "Katowice, Kościuszki 104",
+    "Phone": "327882465",
+    "Link": "https://brynow.wodociagi.katowice.pl/",
+    "Max_persons": ">150",
+    "Tag": "Activity",
+    "Description": "Basen na Brynowie oferuje basen olimpijski, rekreacyjny, sauny, zjeżdżalnię czy salę gimnastyczną."
+  },
+  {
+    "Id": 18,
+    "Name": "Inter Skills",
+    "Address": "Katowice, W. Goetla 9",
+    "Phone": "660 955 451",
+    "Link": "http://www.interskills.pl",
+    "Max_persons": "100",
+    "Tag": "Activity, Food, Outside",
+    "Description": "Paintball, strzelnica, Gry scenariuszowe (LARP-y), Imprezy na wodzie, Imprezy w powietrzu, Imprezy sprawnościowe, Orienteering miejski"
+  },
+  {
+    "Id": 19,
+    "Name": "Old Cuban",
+    "Address": "Katowice, Wojewódzka 26A",
+    "Phone": "530 754 766",
+    "Link": "https://oldcuban.com.pl",
+    "Max_persons": "20",
+    "Tag": "Drink, Food",
+    "Description": "Cocktail bar i Tapas bar w jednym z przemiłą atmosferą"
+  },
+  {
+    "Id": 20,
+    "Name": "Energy 2000",
+    "Address": "Katowice, Plebiscytowa 3",
+    "Phone": "885044912",
+    "Link": "https://katowice.energy2000.pl/",
+    "Max_persons": ">150",
+    "Tag": "Activity, Dance, Drink",
+    "Description": "Klub z 3 zróżnicowanymi salami, wieloma barami oraz potężnym nagłośnieniem."
+  },
+  {
+    "Id": 21,
+    "Name": "BLOKatowice",
+    "Address": "Katowice, Karoliny 18",
+    "Phone": "798299699",
+    "Link": "https://www.blokatowice.pl/",
+    "Max_persons": "50",
+    "Tag": "Activity",
+    "Description": "Klimatyczna bulderownia w Katowicach. Ściana wspinaczkowa, na której możesz wspinać się bez liny i dodatkowego sprzętu. Setki baldów. Profesjonalny materac i ściany systemowe"
+  },
+  {
+    "Id": 22,
+    "Name": "Tennis Courts Muchowiec",
+    "Address": "Katowice, Francuska 188",
+    "Phone": "575996559",
+    "Link": "http://www.muchowiec.pl/",
+    "Max_persons": "20",
+    "Tag": "Activity",
+    "Description": "Korty tenisowe Muchowiec to zdecydowanie jeden z najpiękniejszych ośrodków tenisowych w Polsce. Usytuowany jest niedaleko centrum Katowic na terenie malowniczej Doliny Trzech Stawów."
+  },
+  {
+    "Id": 23,
+    "Name": "Prime Klub",
+    "Address": "Katowice, Mielęckiego 10",
+    "Phone": "883 995 737",
+    "Link": "http://www.primeklub.pl/klub/",
+    "Max_persons": "160",
+    "Tag": "Music, Drink, Food",
+    "Description": "Klub Prime to nietuzinkowe, kulturalno-rozrywkowe miejsce na mapie śląska"
+  }
+]

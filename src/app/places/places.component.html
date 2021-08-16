@@ -1,0 +1,20 @@
+<div class="container">
+  <ul class="places">
+    <li *ngFor="let place of PlacesFromService">
+      <div class="img">
+        <img class="images" src="../../assets/images/{{ place.Id }}.jpg" />
+      </div>
+      <div class="text">
+        <h3>{{ place.Name }}</h3>
+        {{ place.Description }}
+        <h5>
+          {{ place.Address }}, Tel: {{ place.Phone }}, Link do strony:
+          <a href="{{ place.Link }}" target="_blank">{{ place.Link }}</a
+          ><br />Tagi: {{ place.Tag }}<br />
+          Max ilość osób: {{ place.Max_persons }}
+        </h5>
+        <br />
+      </div>
+    </li>
+  </ul>
+</div>
