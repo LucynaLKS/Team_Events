@@ -1,16 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PagesService } from '../pages.service';
-
-interface Place {
-  Id: number;
-  Name: String;
-  Address: String;
-  Phone: String;
-  Link: String;
-  Max_persons: String;
-  Tag: String;
-  Description: String;
-}
+import { PlacesService } from '../places.service';
+import { Place } from '../../models/place';
 
 @Component({
   selector: 'app-places',
@@ -18,14 +8,14 @@ interface Place {
   styleUrls: ['./places.component.scss'],
 })
 export class PlacesComponent implements OnInit {
-  PlacesFromService: any = null;
-  constructor(private pagesService: PagesService) {}
+  PlacesFromService: Place[] = [];
+  constructor(private PlacesService: PlacesService) {}
 
   ngOnInit(): void {
     this.fetchPlaces();
   }
 
   private fetchPlaces(): any {
-    this.PlacesFromService = this.pagesService.getPlaces();
+    this.PlacesFromService = this.PlacesService.getPlaces();
   }
 }
