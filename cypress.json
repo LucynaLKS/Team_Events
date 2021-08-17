@@ -1,4 +1,4 @@
 {
   "video": false,
-  "baseUrl": "https://white-ocean-0a0002503-15.westeurope.azurestaticapps.net/"
+  "baseUrl": "http://localhost:4200/"
 }

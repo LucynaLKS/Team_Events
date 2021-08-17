@@ -10,9 +10,9 @@ describe("List places", () => {
     cy.get("[data-test=header]").should("contain", "Team Event");
   });
 
-  it("should see all of elements list", () => {
+  it("should see all of elements list on single page", () => {
     cy.get('[data-test="list-places"]')
-    .should('have.length', 23);
+    .should('have.length', 5);
   });
 
 })
