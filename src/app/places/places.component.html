@@ -1,6 +1,6 @@
 <div class="container">
   <ul class="places">
-    <li *ngFor="let place of PlacesFromService">
+    <li data-test="list-places" *ngFor="let place of PlacesFromService">
       <div class="img">
         <img class="images" src="../../assets/images/{{ place.Id }}.jpg" />
       </div>
