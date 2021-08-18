@@ -8,7 +8,7 @@ import { Place } from '../../models/place';
   styleUrls: ['./places.component.scss'],
 })
 export class PlacesComponent implements OnInit {
-  p: number = 1;
+  page: number = 1;
   PlacesFromService: Place[] = [];
   constructor(private PlacesService: PlacesService) {}
  

@@ -1,6 +1,6 @@
 <div class="container">
   <ul class="places">
-  <li data-test="list-places" *ngFor="let place of PlacesFromService | paginate: { itemsPerPage: 5, currentPage: p }">
+  <li data-test="list-places" *ngFor="let place of PlacesFromService | paginate: { itemsPerPage: 5, currentPage: page }">
   <div class="img">
   <img class="images" src="../../assets/images/{{ place.Id }}.jpg" />
   </div>
@@ -17,6 +17,6 @@
   </div>
   </li>
   </ul>
-  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
   </div>
   
