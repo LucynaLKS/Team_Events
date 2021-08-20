@@ -1,41 +1,70 @@
-<ul class="places">
-  <li
-    data-test="list-places"
-    *ngFor="
-      let place of PlacesFromService
-        | paginate: { itemsPerPage: 5, currentPage: page }
-    "
-  >
-    <mat-card class="place-card">
-      <mat-card-title>{{ place.Name }}</mat-card-title>
-      <img
-        mat-card-image
-        class="images"
-        src="../../assets/images/{{ place.Id }}.jpg"
-      />
-      {{ place.Description }}
-      <div class="info">
-        {{ place.Address }}, Tel: {{ place.Phone }}, Link do strony:
-        <a href="{{ place.Link }}" target="_blank">{{ place.Link }}</a>
-        <br />Tagi: {{ place.Tag }}<br />
-        Max ilość osób: {{ place.Max_persons }}
-      </div>
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
-      </mat-card-content>
-    
-    </mat-card>
-  </li>
-</ul>
-<pagination-controls (pageChange)="page = $event"></pagination-controls>
-<mat-card-footer class="footer">TEAM EVENTS</mat-card-footer>
+<div class="page">
+  <div class="sort-buttons">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="asc()"
+      class="sorting-button"
+    >
+      A-Z Sort
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="desc()"
+      class="sorting-button"
+    >
+      Z-A Sort
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="reset()"
+      class="sorting-button"
+    >
+      No Sort
+    </button>
+  </div>
+  <ul class="places">
+    <li
+      data-test="list-places"
+      *ngFor="
+        let place of PlacesFromService
+          | paginate: { itemsPerPage: 5, currentPage: page }
+      "
+    >
+      <mat-card class="place-card">
+        <mat-card-header>
+          <mat-card-title>{{ place.Name }}</mat-card-title>
+        </mat-card-header>
+
+        <img
+          mat-card-image
+          class="images"
+          src="../../assets/images/{{ place.Id }}.jpg"
+        />
+        <mat-card-content class="content">
+          <div class="description">{{ place.Description }}</div>
+          <div class="info">
+            {{ place.Address }}, Tel: {{ place.Phone }}, Link do strony:
+            <a href="{{ place.Link }}" target="_blank">{{ place.Link }}</a>
+            <br />
+            Max ilość osób: {{ place.Max_persons }}
+            <mat-chip-list
+              ><mat-chip
+                *ngFor="let tag of place.Tag"
+                color="primary"
+                selected
+                class="tag"
+              >
+                {{ tag }}
+              </mat-chip></mat-chip-list
+            >
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </li>
+  </ul>
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+  <mat-card-footer class="footer">TEAM EVENTS</mat-card-footer>
+</div>

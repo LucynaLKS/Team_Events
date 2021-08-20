@@ -1,8 +1,8 @@
-.place-card{
-  max-width: 400px;
+.place-card {
+  max-width: 600px;
 }
 
-.footer{
+.footer {
   text-align: center;
 }
 
@@ -12,4 +12,31 @@
 
 li {
   margin: 15px;
+}
+
+.info {
+  font-size: smaller;
+  font-weight: bold;
+}
+
+.description {
+  font-size: small;
+  padding-bottom: 20px;
+}
+
+.tag {
+  font-size: smaller;
+  min-height: 22px !important;
+}
+
+.sort-buttons {
+  text-align: center;
+}
+
+.page {
+  max-width: 600px;
+}
+
+.sorting-button {
+  margin: 0px 10px;
 }
