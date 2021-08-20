@@ -1,22 +1,41 @@
-<div class="container">
-  <ul class="places">
-  <li data-test="list-places" *ngFor="let place of PlacesFromService | paginate: { itemsPerPage: 5, currentPage: page }">
-  <div class="img">
-  <img class="images" src="../../assets/images/{{ place.Id }}.jpg" />
-  </div>
-  <div class="text">
-  <h3>{{ place.Name }}</h3>
-  {{ place.Description }}
-  <h5>
-  {{ place.Address }}, Tel: {{ place.Phone }}, Link do strony:
-  <a href="{{ place.Link }}" target="_blank">{{ place.Link }}</a
-  ><br />Tagi: {{ place.Tag }}<br />
-  Max ilość osób: {{ place.Max_persons }}
-  </h5>
-  <br />
-  </div>
+<ul class="places">
+  <li
+    data-test="list-places"
+    *ngFor="
+      let place of PlacesFromService
+        | paginate: { itemsPerPage: 5, currentPage: page }
+    "
+  >
+    <mat-card class="place-card">
+      <mat-card-title>{{ place.Name }}</mat-card-title>
+      <img
+        mat-card-image
+        class="images"
+        src="../../assets/images/{{ place.Id }}.jpg"
+      />
+      {{ place.Description }}
+      <div class="info">
+        {{ place.Address }}, Tel: {{ place.Phone }}, Link do strony:
+        <a href="{{ place.Link }}" target="_blank">{{ place.Link }}</a>
+        <br />Tagi: {{ place.Tag }}<br />
+        Max ilość osób: {{ place.Max_persons }}
+      </div>
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+    
+    </mat-card>
   </li>
-  </ul>
-  <pagination-controls (pageChange)="page = $event"></pagination-controls>
-  </div>
-  
+</ul>
+<pagination-controls (pageChange)="page = $event"></pagination-controls>
+<mat-card-footer class="footer">TEAM EVENTS</mat-card-footer>
