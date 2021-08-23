@@ -22,18 +22,21 @@ export class PlacesComponent implements OnInit {
     this.PlacesFromService.sort((a, b) =>
       a.Id > b.Id ? 1 : b.Id > a.Id ? -1 : 0
     );
+    this.page = 1;
   }
 
   asc() {
     this.PlacesFromService.sort((a, b) =>
       a.Name > b.Name ? 1 : b.Name > a.Name ? -1 : 0
     );
+    this.page = 1;
   }
 
   desc() {
     this.PlacesFromService.sort((a, b) =>
       a.Name < b.Name ? 1 : b.Name < a.Name ? -1 : 0
     );
+    this.page = 1;
   }
 
   private fetchPlaces(): any {
