@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FooterComponent } from './footer/footer.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [AppComponent, PlacesComponent, FooterComponent],
@@ -25,6 +27,7 @@ import { FooterComponent } from './footer/footer.component';
     MatPaginatorModule,
     MatSelectModule,
     MatGridListModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

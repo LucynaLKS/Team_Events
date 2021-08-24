@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PlacesService } from '../places.service';
 import { Place } from '../../models/place';
 import { PaginatePipe } from 'ngx-pagination';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-places',
@@ -12,10 +13,23 @@ export class PlacesComponent implements OnInit {
   page: number = 1;
   PlacesFromService: Place[] = [];
 
-  constructor(private PlacesService: PlacesService) {}
+  constructor(
+    private PlacesService: PlacesService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.fetchPlaces();
+
+    this.route.queryParams.subscribe((params) => {
+      console.log(params);
+      if (params.order === 'alf-asc') {
+        this.asc();
+      } else if (params.order === 'alf-dsc') {
+        this.desc();
+      }
+    });
   }
 
   reset() {
@@ -23,6 +37,7 @@ export class PlacesComponent implements OnInit {
       a.Id > b.Id ? 1 : b.Id > a.Id ? -1 : 0
     );
     this.page = 1;
+    this.router.navigate(['/'], { queryParams: {} });
   }
 
   asc() {
@@ -30,6 +45,7 @@ export class PlacesComponent implements OnInit {
       a.Name > b.Name ? 1 : b.Name > a.Name ? -1 : 0
     );
     this.page = 1;
+    this.router.navigate(['/'], { queryParams: { order: 'alf-asc' } });
   }
 
   desc() {
@@ -37,6 +53,7 @@ export class PlacesComponent implements OnInit {
       a.Name < b.Name ? 1 : b.Name < a.Name ? -1 : 0
     );
     this.page = 1;
+    this.router.navigate(['/'], { queryParams: { order: 'alf-dsc' } });
   }
 
   private fetchPlaces(): any {
