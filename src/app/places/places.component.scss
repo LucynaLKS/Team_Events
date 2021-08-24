@@ -1,3 +1,42 @@
-.images {
-  width: 300px;
+.place-card {
+  max-width: 600px;
+}
+
+.footer {
+  text-align: center;
+}
+
+.places {
+  list-style-type: none;
+}
+
+li {
+  margin: 15px 25px;
+}
+
+.info {
+  font-size: smaller;
+  font-weight: bold;
+}
+
+.description {
+  font-size: small;
+  padding-bottom: 20px;
+}
+
+.tag {
+  font-size: smaller;
+  min-height: 22px;
+}
+
+.sort-buttons {
+  text-align: center;
+}
+
+.page {
+  max-width: 600px;
+}
+
+.sorting-button {
+  margin: 0px 10px;
 }
