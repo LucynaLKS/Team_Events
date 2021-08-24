@@ -3,22 +3,6 @@ import { PlacesService } from '../places.service';
 import { Place } from '../../models/place';
 import { PaginatePipe } from 'ngx-pagination';
 import { ActivatedRoute, Router } from '@angular/router';
-/*
-sort: string | undefined;
-// category: string | undefined;
-
-constructor(private route: ActivatedRoute) {}
-
-ngOnInit() {
-  this.route.queryParams
-  // .filter(params => params.category)
-  .subscribe((params) => {
-    console.log(params);
-    this.sort = params.sort;
-    // this.category = params.category;
-    console.log(this.sort);
-  });
-}*/
 
 @Component({
   selector: 'app-places',
