@@ -284,5 +284,16 @@
     "Max_persons": "100",
     "Tag": ["Music", "Dance", "Drink", "Food"],
     "Description": "BLUE BOX to świetne miejsce startowe przed weekendową zabawą w innych luksusowych klubach Katowic"
+  },
+  {
+    "Id": 27,
+    "Name": "Żurownia",
+    "Rating": 4.5,
+    "Address": "Katowice, Ligonia 16",
+    "Phone": "535 084 666",
+    "Link": "https://zurownia.pl",
+    "Max_persons": "35",
+    "Tag": ["Drink", "Food"],
+    "Description": "Tradycyjne śląskie dania i piwo w restauracji o industrialnym wystroju."
   }
 ]
