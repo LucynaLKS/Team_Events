@@ -2,6 +2,7 @@
   {
     "Id": 1,
     "Name": "Quest Cage Escape Room",
+    "Rating": 5,
     "Address": "Katowice, ul. 3 Maja 6-8 lok. 3",
     "Phone": "731 403 30",
     "Link": "https://questcage.pl",
@@ -12,6 +13,7 @@
   {
     "Id": 2,
     "Name": "Quest Cage Escape Room",
+    "Rating": 5,
     "Address": "Katowice, Dębowa 65/5",
     "Phone": "794 780 888",
     "Link": "https://questcage.pl",
@@ -22,6 +24,7 @@
   {
     "Id": 3,
     "Name": "Next Room Katowice",
+    "Rating": 5,
     "Address": "Katowice, ul. Sowińskiego 5A",
     "Phone": "733 100 229",
     "Link": "http://nextescaperoom.pl",
@@ -32,6 +35,7 @@
   {
     "Id": 4,
     "Name": "Centrum Rozrywki Grawitacja",
+    "Rating": 4,
     "Address": "Katowice, Gliwicka 44",
     "Phone": "(32) 359 59 81",
     "Link": "http://www.gravitacja.pl/start-katowice",
@@ -42,6 +46,7 @@
   {
     "Id": 5,
     "Name": "Club Garage",
+    "Rating": 4.5,
     "Address": "Katowice, Dąbrówki 10",
     "Phone": "502-483-920",
     "Link": "https://clubgarage.pl",
@@ -51,7 +56,8 @@
   },
   {
     "Id": 6,
-    "Name": "Silesian Museum",
+    "Name": "Muzeum Śląskie",
+    "Rating": 5,
     "Address": "Katowice, Tadeusza Dobrowolskiego 1",
     "Phone": "32 779 93 00",
     "Link": "https://muzeumslaskie.pl/pl/",
@@ -62,6 +68,7 @@
   {
     "Id": 7,
     "Name": "JumpWorld",
+    "Rating": 4.5,
     "Address": "Katowice, Pszczynska 6",
     "Phone": "572 955 975",
     "Link": "https://www.jumpworld.pl/pl/katowice/",
@@ -72,6 +79,7 @@
   {
     "Id": 8,
     "Name": "Laserhouse",
+    "Rating": 4.5,
     "Address": "Katowice, Kamienna 9",
     "Phone": "(32) 229 00 21",
     "Link": "https://laserhouse.pl/",
@@ -81,7 +89,8 @@
   },
   {
     "Id": 9,
-    "Name": "Museum of Computer and Information Technology",
+    "Name": "Muzeum Historii Komputerów i Informatyki",
+    "Rating": 5,
     "Address": "Katowice, Oddziałów Młodzieży Powstańczej 1",
     "Phone": "32 4130890",
     "Link": "http://www.muzeumkomputerow.edu.pl/",
@@ -92,6 +101,7 @@
   {
     "Id": 10,
     "Name": "JUMPCITY",
+    "Rating": 4.5,
     "Address": "Katowice, Kościuszki 227",
     "Phone": "(32) 781 88 84",
     "Link": "https://katowice.jumpcity.pl",
@@ -102,6 +112,7 @@
   {
     "Id": 11,
     "Name": "Flyspot - Katowice Indoor Skydiving",
+    "Rating": 5,
     "Address": "Katowice, Chorzowska 100",
     "Phone": "698 626 500",
     "Link": "https://www.flyspot.com/pl/",
@@ -112,6 +123,7 @@
   {
     "Id": 12,
     "Name": "Vinoteka",
+    "Rating": 5,
     "Address": "Katowice, Wawelska 2",
     "Phone": "790 212 592",
     "Link": "https://vinotekakatowice.business.site",
@@ -122,6 +134,7 @@
   {
     "Id": 13,
     "Name": "Cybermachina",
+    "Rating": 4.5,
     "Address": "Katowice, Św. Jana 10",
     "Phone": "618 121 193",
     "Link": "http://cybermachina.pl",
@@ -132,6 +145,7 @@
   {
     "Id": 14,
     "Name": "Squashok",
+    "Rating": 4.5,
     "Address": "Katowice, Wiązowa 5",
     "Phone": "327337867",
     "Link": "https://squashok.pl/",
@@ -142,6 +156,7 @@
   {
     "Id": 15,
     "Name": "Komenda Wojewódzka Policji w Katowicach",
+    "Rating": 2.5,
     "Address": "Katowice, Lompy 19",
     "Phone": "997 / 478512222",
     "Link": "https://slaska.policja.gov.pl/",
@@ -152,6 +167,7 @@
   {
     "Id": 16,
     "Name": "Sztauwajery",
+    "Rating": 4.5,
     "Address": "Katowice, Pułaskiego 71",
     "Phone": "-",
     "Link": "https://www.facebook.com/sztauwajery/",
@@ -162,6 +178,7 @@
   {
     "Id": 17,
     "Name": "Basen Brynów",
+    "Rating": 4.5,
     "Address": "Katowice, Kościuszki 104",
     "Phone": "327882465",
     "Link": "https://brynow.wodociagi.katowice.pl/",
@@ -172,6 +189,7 @@
   {
     "Id": 18,
     "Name": "Inter Skills",
+    "Rating": 4.5,
     "Address": "Katowice, W. Goetla 9",
     "Phone": "660 955 451",
     "Link": "http://www.interskills.pl",
@@ -182,6 +200,7 @@
   {
     "Id": 19,
     "Name": "Old Cuban",
+    "Rating": 4.5,
     "Address": "Katowice, Wojewódzka 26A",
     "Phone": "530 754 766",
     "Link": "https://oldcuban.com.pl",
@@ -192,6 +211,7 @@
   {
     "Id": 20,
     "Name": "Energy 2000",
+    "Rating": 4,
     "Address": "Katowice, Plebiscytowa 3",
     "Phone": "885044912",
     "Link": "https://katowice.energy2000.pl/",
@@ -202,6 +222,7 @@
   {
     "Id": 21,
     "Name": "BLOKatowice",
+    "Rating": 4.5,
     "Address": "Katowice, Karoliny 18",
     "Phone": "798299699",
     "Link": "https://www.blokatowice.pl/",
@@ -212,6 +233,7 @@
   {
     "Id": 22,
     "Name": "Tennis Courts Muchowiec",
+    "Rating": 5,
     "Address": "Katowice, Francuska 188",
     "Phone": "575996559",
     "Link": "http://www.muchowiec.pl/",
@@ -222,11 +244,45 @@
   {
     "Id": 23,
     "Name": "Prime Klub",
+    "Rating": 4,
     "Address": "Katowice, Mielęckiego 10",
     "Phone": "883 995 737",
     "Link": "http://www.primeklub.pl/klub/",
     "Max_persons": "160",
     "Tag": ["Music", "Drink", "Food"],
     "Description": "Klub Prime to nietuzinkowe, kulturalno-rozrywkowe miejsce na mapie śląska"
+  },
+  {
+    "Id": 24,
+    "Name": "Harnaś",
+    "Rating": 2.5,
+    "Address": "Katowice, Kościuszki 29",
+    "Phone": "Brak",
+    "Link": "https://m.facebook.com/HarnasBarSpotted/?locale2=pl_PL",
+    "Max_persons": "50",
+    "Tag": ["Activity", "Drink", "Food"],
+    "Description": "Bar Harnaś to miejsce dla odważnych czynne 24h na dobę"
+  },
+  {
+    "Id": 25,
+    "Name": "Pizzeria Nocna",
+    "Rating": 3,
+    "Address": "Katowice, Witosa 18A",
+    "Phone": " 732 519 519",
+    "Link": "https://katowice.pizzerianocna.pl",
+    "Max_persons": "25",
+    "Tag": ["Drink", "Food"],
+    "Description": "Nocna pizza dla głodnych wrażeń. Nasza pizzeria to idealny wybór dla wszystkich tych, którzy uwielbiają wysokiej jakości pizzę i inne przekąski. Dostawa jedzenia w nocy? U nas to możliwe!"
+  },
+  {
+    "Id": 26,
+    "Name": "Blue Box",
+    "Rating": 3.5,
+    "Address": "Katowice, Krzywa 2",
+    "Phone": "32 206 82 34",
+    "Link": "https://katobluebox.wixsite.com/blueboxL",
+    "Max_persons": "100",
+    "Tag": ["Music", "Dance", "Drink", "Food"],
+    "Description": "BLUE BOX to świetne miejsce startowe przed weekendową zabawą w innych luksusowych klubach Katowic"
   }
 ]
