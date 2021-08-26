@@ -18,6 +18,6 @@ describe("List sorting", () => {
 
   it("should see the No sorting", () => {
     cy.get('[date-test="sort-button No Sort"]').click();
-    cy.get(".mat-card-title").should("contain", "Quest Cage Escape Room");
+    cy.get(".mat-card-title").should("contain", "Żurownia");
   });
 });
