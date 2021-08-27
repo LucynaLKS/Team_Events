@@ -13,11 +13,11 @@ describe("List sorting", () => {
 
   it("should see the Z-A sorting", () => {
     cy.get('[date-test="sort-button Z-A"]').click();
-    cy.get(".mat-card-title").should("contain", "Vinoteka");
+    cy.get(".mat-card-title").should("contain", "Żurownia");
   });
 
   it("should see the No sorting", () => {
     cy.get('[date-test="sort-button No Sort"]').click();
-    cy.get(".mat-card-title").should("contain", "Żurownia");
+    cy.get(".mat-card-title").should("contain", "Quest Cage Escape Room");
   });
 });
