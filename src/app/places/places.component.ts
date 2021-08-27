@@ -32,6 +32,33 @@ export class PlacesComponent implements OnInit {
     });
   }
 
+  counter(i: number) {
+    return new Array(Math.trunc(i));
+}
+
+checkFull(i: number, rating: number){
+  if (i+1 <= rating) {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+  
+}
+
+checkHalf(i: number, rating: number){
+  if (rating > i) {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+  
+}
+
+
   reset() {
     this.PlacesFromService.sort((a, b) =>
       a.Id > b.Id ? 1 : b.Id > a.Id ? -1 : 0
