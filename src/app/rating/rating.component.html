@@ -1,4 +1,4 @@
-<span *ngFor="let maxRating of [1,2,3,4,5]; let i = index">
+<span *ngFor="let i of maxRating">
     <div
       *ngIf="isFull(i, rating); then fullHeart; else notFullHeart"
     ></div>

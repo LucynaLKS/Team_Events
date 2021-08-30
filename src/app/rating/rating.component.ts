@@ -9,7 +9,7 @@ import { Place } from 'src/models/place';
 export class RatingComponent implements OnInit {
   @Input() rating: number = 0;
 
-  readonly maxRating: number[] = [1,2,3,4,5];
+  readonly maxRating: number[] = [0,1,2,3,4];
  
   constructor() {}
 
