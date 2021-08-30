@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatBadgeModule } from '@angular/material/badge';
 
 import { AppComponent } from './app.component';
 import { PlacesComponent } from './places/places.component';
@@ -13,10 +14,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
-  declarations: [AppComponent, PlacesComponent, FooterComponent],
+  declarations: [AppComponent, PlacesComponent, FooterComponent, RatingComponent],
   imports: [
     BrowserModule,
     NgxPaginationModule,
@@ -28,6 +29,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatSelectModule,
     MatGridListModule,
     AppRoutingModule,
+    MatBadgeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
