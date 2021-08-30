@@ -15,6 +15,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RatingComponent } from './rating/rating.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 @NgModule({
   declarations: [AppComponent, PlacesComponent, FooterComponent, RatingComponent],
@@ -30,6 +31,7 @@ import { RatingComponent } from './rating/rating.component';
     MatGridListModule,
     AppRoutingModule,
     MatBadgeModule,
+    NgxSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent],

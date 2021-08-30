@@ -3,6 +3,7 @@ import { PlacesService } from '../places.service';
 import { Place } from '../../models/place';
 import { PaginatePipe } from 'ngx-pagination';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Options } from '@angular-slider/ngx-slider';
 
 interface Sort {
   value: string;
@@ -14,7 +15,15 @@ interface Sort {
   templateUrl: './places.component.html',
   styleUrls: ['./places.component.scss'],
 })
+
 export class PlacesComponent implements OnInit {
+  lowValue: number = 0;
+  highValue: number = 5;
+  options: Options = {
+    floor: 0,
+    ceil: 5,
+    step: 0.5
+  };
   page: number = 1;
   PlacesFromService: Place[] = [];
 

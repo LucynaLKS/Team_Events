@@ -1,3 +1,11 @@
+<div class="div-slider">
+  <ngx-slider
+    date-test="slider"
+    [(value)]="lowValue"
+    [(highValue)]="highValue"
+    [options]="options"
+  ></ngx-slider>
+</div>
 <div class="page">
   <mat-form-field class="select-sort" appearance="fill">
     <mat-label>Sortowanie</mat-label>
@@ -7,9 +15,12 @@
       [(value)]="selectedSort"
     >
       <mat-option></mat-option>
-      <mat-option data-test="sort-option" [value]="option.value" *ngFor="let option of sort">{{
-        option.viewValue
-      }}</mat-option>
+      <mat-option
+        data-test="sort-option"
+        [value]="option.value"
+        *ngFor="let option of sort"
+        >{{ option.viewValue }}</mat-option
+      >
     </mat-select>
   </mat-form-field>
   <ul class="places">
