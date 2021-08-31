@@ -16,9 +16,16 @@ import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RatingComponent } from './rating/rating.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
-  declarations: [AppComponent, PlacesComponent, FooterComponent, RatingComponent],
+  declarations: [
+    AppComponent,
+    PlacesComponent,
+    FooterComponent,
+    RatingComponent,
+    SliderComponent,
+  ],
   imports: [
     BrowserModule,
     NgxPaginationModule,
@@ -31,7 +38,7 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     MatGridListModule,
     AppRoutingModule,
     MatBadgeModule,
-    NgxSliderModule
+    NgxSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

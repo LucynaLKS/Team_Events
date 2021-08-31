@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { PlacesService } from '../places.service';
 import { Place } from '../../models/place';
 import { PaginatePipe } from 'ngx-pagination';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Options } from '@angular-slider/ngx-slider';
+import { RangeInterface } from '../slider/slider.component';
 
 interface Sort {
   value: string;
@@ -15,17 +15,10 @@ interface Sort {
   templateUrl: './places.component.html',
   styleUrls: ['./places.component.scss'],
 })
-
 export class PlacesComponent implements OnInit {
-  lowValue: number = 0;
-  highValue: number = 5;
-  options: Options = {
-    floor: 0,
-    ceil: 5,
-    step: 0.5
-  };
+  @Output() rating = 0;
   page: number = 1;
-  PlacesFromService: Place[] = [];
+  Places: Place[] = [];
 
   sort: Sort[] = [
     { value: 'No-sort', viewValue: 'Brak' },
@@ -75,7 +68,7 @@ export class PlacesComponent implements OnInit {
   }
 
   ratingFromHigh() {
-    this.PlacesFromService.sort((a, b) =>
+    this.Places.sort((a, b) =>
       a.Rating < b.Rating ? 1 : b.Rating < a.Rating ? -1 : 0
     );
     this.page = 1;
@@ -83,7 +76,7 @@ export class PlacesComponent implements OnInit {
   }
 
   ratingFromLow() {
-    this.PlacesFromService.sort((a, b) =>
+    this.Places.sort((a, b) =>
       a.Rating > b.Rating ? 1 : b.Rating > a.Rating ? -1 : 0
     );
     this.page = 1;
@@ -91,15 +84,13 @@ export class PlacesComponent implements OnInit {
   }
 
   reset() {
-    this.PlacesFromService.sort((a, b) =>
-      a.Id > b.Id ? 1 : b.Id > a.Id ? -1 : 0
-    );
+    this.Places.sort((a, b) => (a.Id > b.Id ? 1 : b.Id > a.Id ? -1 : 0));
     this.page = 1;
     this.router.navigate(['/'], { queryParams: {} });
   }
 
   asc() {
-    this.PlacesFromService.sort((a, b) =>
+    this.Places.sort((a, b) =>
       a.Name > b.Name ? 1 : b.Name > a.Name ? -1 : 0
     );
     this.page = 1;
@@ -107,14 +98,19 @@ export class PlacesComponent implements OnInit {
   }
 
   desc() {
-    this.PlacesFromService.sort((a, b) =>
+    this.Places.sort((a, b) =>
       a.Name < b.Name ? 1 : b.Name < a.Name ? -1 : 0
     );
     this.page = 1;
     this.router.navigate(['/'], { queryParams: { order: 'alf-dsc' } });
   }
 
-  private fetchPlaces(): any {
-    this.PlacesFromService = this.PlacesService.getPlaces();
+  rangeChange(event: RangeInterface) {
+    console.log('from places', event);
+    this.Places = this.PlacesService.getFilteredPlacesByRating(event);
+  }
+
+  fetchPlaces(): any {
+    this.Places = this.PlacesService.getPlaces();
   }
 }

@@ -1,11 +1,4 @@
-<div class="div-slider">
-  <ngx-slider
-    date-test="slider"
-    [(value)]="lowValue"
-    [(highValue)]="highValue"
-    [options]="options"
-  ></ngx-slider>
-</div>
+<app-slider (userChangeEvent)="rangeChange($event)"></app-slider>
 <div class="page">
   <mat-form-field class="select-sort" appearance="fill">
     <mat-label>Sortowanie</mat-label>
@@ -27,8 +20,7 @@
     <li
       data-test="list-places"
       *ngFor="
-        let place of PlacesFromService
-          | paginate: { itemsPerPage: 5, currentPage: page }
+        let place of Places | paginate: { itemsPerPage: 5, currentPage: page }
       "
     >
       <mat-card class="place-card">
