@@ -1,3 +1,4 @@
+<app-slider (userChangeEvent)="filterPlaces($event)"></app-slider>
 <div class="page">
   <mat-form-field class="select-sort" appearance="fill">
     <mat-label>Sortowanie</mat-label>
@@ -7,17 +8,19 @@
       [(value)]="selectedSort"
     >
       <mat-option></mat-option>
-      <mat-option data-test="sort-option" [value]="option.value" *ngFor="let option of sort">{{
-        option.viewValue
-      }}</mat-option>
+      <mat-option
+        data-test="sort-option"
+        [value]="option.value"
+        *ngFor="let option of sort"
+        >{{ option.viewValue }}</mat-option
+      >
     </mat-select>
   </mat-form-field>
   <ul class="places">
     <li
       data-test="list-places"
       *ngFor="
-        let place of PlacesFromService
-          | paginate: { itemsPerPage: 5, currentPage: page }
+        let place of Places | paginate: { itemsPerPage: 5, currentPage: page }
       "
     >
       <mat-card class="place-card">

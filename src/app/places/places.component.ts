@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { PlacesService } from '../places.service';
 import { Place } from '../../models/place';
 import { PaginatePipe } from 'ngx-pagination';
 import { ActivatedRoute, Router } from '@angular/router';
+import { RangeInterface } from '../slider/slider.component';
 
 interface Sort {
   value: string;
@@ -15,8 +16,9 @@ interface Sort {
   styleUrls: ['./places.component.scss'],
 })
 export class PlacesComponent implements OnInit {
+  @Output() rating = 0;
   page: number = 1;
-  PlacesFromService: Place[] = [];
+  Places: Place[] = [];
 
   sort: Sort[] = [
     { value: 'No-sort', viewValue: 'Brak' },
@@ -66,7 +68,7 @@ export class PlacesComponent implements OnInit {
   }
 
   ratingFromHigh() {
-    this.PlacesFromService.sort((a, b) =>
+    this.Places.sort((a, b) =>
       a.Rating < b.Rating ? 1 : b.Rating < a.Rating ? -1 : 0
     );
     this.page = 1;
@@ -74,7 +76,7 @@ export class PlacesComponent implements OnInit {
   }
 
   ratingFromLow() {
-    this.PlacesFromService.sort((a, b) =>
+    this.Places.sort((a, b) =>
       a.Rating > b.Rating ? 1 : b.Rating > a.Rating ? -1 : 0
     );
     this.page = 1;
@@ -82,15 +84,13 @@ export class PlacesComponent implements OnInit {
   }
 
   reset() {
-    this.PlacesFromService.sort((a, b) =>
-      a.Id > b.Id ? 1 : b.Id > a.Id ? -1 : 0
-    );
+    this.Places.sort((a, b) => (a.Id > b.Id ? 1 : b.Id > a.Id ? -1 : 0));
     this.page = 1;
     this.router.navigate(['/'], { queryParams: {} });
   }
 
   asc() {
-    this.PlacesFromService.sort((a, b) =>
+    this.Places.sort((a, b) =>
       a.Name > b.Name ? 1 : b.Name > a.Name ? -1 : 0
     );
     this.page = 1;
@@ -98,14 +98,18 @@ export class PlacesComponent implements OnInit {
   }
 
   desc() {
-    this.PlacesFromService.sort((a, b) =>
+    this.Places.sort((a, b) =>
       a.Name < b.Name ? 1 : b.Name < a.Name ? -1 : 0
     );
     this.page = 1;
     this.router.navigate(['/'], { queryParams: { order: 'alf-dsc' } });
   }
 
-  private fetchPlaces(): any {
-    this.PlacesFromService = this.PlacesService.getPlaces();
+  filterPlaces(event: RangeInterface) {
+    this.Places = this.PlacesService.getFilteredPlacesByRating(event);
+  }
+
+  fetchPlaces(): any {
+    this.Places = this.PlacesService.getPlaces();
   }
 }

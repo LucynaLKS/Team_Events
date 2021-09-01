@@ -156,7 +156,7 @@
   {
     "Id": 15,
     "Name": "Komenda Wojewódzka Policji w Katowicach",
-    "Rating": 2.5,
+    "Rating": 0.5,
     "Address": "Katowice, Lompy 19",
     "Phone": "997 / 478512222",
     "Link": "https://slaska.policja.gov.pl/",
@@ -178,7 +178,7 @@
   {
     "Id": 17,
     "Name": "Basen Brynów",
-    "Rating": 4.5,
+    "Rating": 2,
     "Address": "Katowice, Kościuszki 104",
     "Phone": "327882465",
     "Link": "https://brynow.wodociagi.katowice.pl/",
@@ -233,7 +233,7 @@
   {
     "Id": 22,
     "Name": "Tennis Courts Muchowiec",
-    "Rating": 5,
+    "Rating": 1,
     "Address": "Katowice, Francuska 188",
     "Phone": "575996559",
     "Link": "http://www.muchowiec.pl/",
@@ -244,7 +244,7 @@
   {
     "Id": 23,
     "Name": "Prime Klub",
-    "Rating": 4,
+    "Rating": 3.5,
     "Address": "Katowice, Mielęckiego 10",
     "Phone": "883 995 737",
     "Link": "http://www.primeklub.pl/klub/",
@@ -255,7 +255,7 @@
   {
     "Id": 24,
     "Name": "Harnaś",
-    "Rating": 2.5,
+    "Rating": 1.5,
     "Address": "Katowice, Kościuszki 29",
     "Phone": "Brak",
     "Link": "https://m.facebook.com/HarnasBarSpotted/?locale2=pl_PL",
@@ -266,7 +266,7 @@
   {
     "Id": 25,
     "Name": "Pizzeria Nocna",
-    "Rating": 3,
+    "Rating": 2.5,
     "Address": "Katowice, Witosa 18A",
     "Phone": " 732 519 519",
     "Link": "https://katowice.pizzerianocna.pl",
@@ -277,7 +277,7 @@
   {
     "Id": 26,
     "Name": "Blue Box",
-    "Rating": 3.5,
+    "Rating": 3,
     "Address": "Katowice, Krzywa 2",
     "Phone": "32 206 82 34",
     "Link": "https://katobluebox.wixsite.com/blueboxL",
@@ -295,5 +295,16 @@
     "Max_persons": "35",
     "Tag": ["Drink", "Food"],
     "Description": "Tradycyjne śląskie dania i piwo w restauracji o industrialnym wystroju."
+  },
+  {
+    "Id": 28,
+    "Name": "Miejska Izba Wytrzeźwień",
+    "Rating": 1,
+    "Address": "Katowice, Macieja 10",
+    "Phone": "32 351 07 70",
+    "Link": "http://oi.katowice.pl",
+    "Max_persons": "35",
+    "Tag": ["Activity", "Drink"],
+    "Description": "Miejsce cechujące się spokojem i przyjemną atmosferą, idealne na zatrzymanie się na parę godzin po imprezie :)"
   }
 ]
