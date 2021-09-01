@@ -105,8 +105,7 @@ export class PlacesComponent implements OnInit {
     this.router.navigate(['/'], { queryParams: { order: 'alf-dsc' } });
   }
 
-  rangeChange(event: RangeInterface) {
-    console.log('from places', event);
+  filterPlaces(event: RangeInterface) {
     this.Places = this.PlacesService.getFilteredPlacesByRating(event);
   }
 
