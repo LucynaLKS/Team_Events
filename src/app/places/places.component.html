@@ -30,7 +30,7 @@
           src="../../assets/images/{{ place.Id }}.jpg"
         />
         <mat-card-header>
-          <mat-card-title class="title">{{ place.Name }}</mat-card-title>
+          <mat-card-title data-test="card-title" class="title">{{ place.Name }}</mat-card-title>
         </mat-card-header>
         <app-rating [rating]="place.Rating"></app-rating>
 
