@@ -2,7 +2,7 @@
 /// <reference types="cypress" />
 
 import { navigationTo } from "../../support/page_objects/navigationPage";
-import { onSliderMove } from "../../support/page_objects/sliderMove";
+import { onSlider } from "../../support/page_objects/sliderMove";
 
 describe("Dropdwon test with Page Object Pattern", () => {
 
@@ -15,7 +15,7 @@ describe("Dropdwon test with Page Object Pattern", () => {
       });
 
     it("should move slider", () => {
-        onSliderMove.movingSlider()
+        onSlider.sliderByMovingIt()
     });
 
 });

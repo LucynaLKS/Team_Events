@@ -1,6 +1,6 @@
-export class SliderMove {
+export class Slider {
 
-    movingSlider() {
+    sliderByMovingIt() {
 
         const currentValueMin = 0;
         const targetValueMin = 3;
@@ -33,4 +33,4 @@ export class SliderMove {
 
 }
 
-export const onSliderMove = new SliderMove()
+export const onSlider = new Slider()
