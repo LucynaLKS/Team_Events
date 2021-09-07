@@ -16,7 +16,7 @@
       >
     </mat-select>
   </mat-form-field>
-  <ul class="places">
+  <ul data-test="all-places" class="places">
     <li
       data-test="list-places"
       *ngFor="
@@ -32,7 +32,7 @@
         <mat-card-header>
           <mat-card-title data-test="card-title" class="title">{{ place.Name }}</mat-card-title>
         </mat-card-header>
-        <app-rating [rating]="place.Rating"></app-rating>
+        <app-rating data-test="rating" [rating]="place.Rating"></app-rating>
 
         <mat-card-content class="content">
           <div class="description">
