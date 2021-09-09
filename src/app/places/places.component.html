@@ -29,32 +29,34 @@
           class="images"
           src="../../assets/images/{{ place.Id }}.jpg"
         />
-        <mat-card-header>
-          <mat-card-title data-test="card-title" class="title">{{ place.Name }}</mat-card-title>
-        </mat-card-header>
-        <app-rating data-test="rating" [rating]="place.Rating"></app-rating>
-
-        <mat-card-content class="content">
-          <div class="description">
-            {{ place.Description }}
-          </div>
-          <div class="info">
-            {{ place.Address }}, Tel: {{ place.Phone }}, Link do strony:
-            <a href="{{ place.Link }}" target="_blank">{{ place.Link }}</a>
-            <br />
-            Maks. liczba osób: {{ place.Max_persons }}
-            <mat-chip-list>
-              <mat-chip
-                *ngFor="let tag of place.Tag"
-                color="primary"
-                selected
-                class="tag"
-              >
-                {{ tag }}
-              </mat-chip>
-            </mat-chip-list>
-          </div>
-        </mat-card-content>
+        <div class="content">
+          <mat-card-header>
+            <mat-card-title data-test="card-title" class="title">{{ place.Name }}</mat-card-title>
+          </mat-card-header>
+          <app-rating data-test="rating" [rating]="place.Rating"></app-rating>
+  
+          <mat-card-content class="content">
+            <div class="description">
+              {{ place.Description }}
+            </div>
+            <div class="info">
+              {{ place.Address }}, Tel: {{ place.Phone }}, Link do strony:
+              <a href="{{ place.Link }}" target="_blank">{{ place.Link }}</a>
+              <br />
+              Maks. liczba osób: {{ place.Max_persons }}
+              <mat-chip-list>
+                <mat-chip
+                  *ngFor="let tag of place.Tag"
+                  color="primary"
+                  selected
+                  class="tag"
+                >
+                  {{ tag }}
+                </mat-chip>
+              </mat-chip-list>
+            </div>
+          </mat-card-content>
+        </div>
       </mat-card>
     </li>
   </ul>
