@@ -1,5 +1,7 @@
-<app-slider (userChangeEvent)="filterPlaces($event)"></app-slider>
+
 <div class="page">
+  <h3>Ocena</h3>
+  <app-slider (userChangeEvent)="filterPlaces($event)"></app-slider>
   <mat-form-field class="select-sort" appearance="fill">
     <mat-label>Sortowanie</mat-label>
     <mat-select
@@ -16,14 +18,13 @@
       >
     </mat-select>
   </mat-form-field>
-  <ul data-test="all-places" class="places">
-    <li
-      data-test="list-places"
-      *ngFor="
-        let place of Places | paginate: { itemsPerPage: 5, currentPage: page }
-      "
-    >
-      <mat-card class="place-card">
+  <div data-test="all-places" class="places">
+      <mat-card class="place-card"
+        data-test="list-places"
+        *ngFor="
+          let place of Places | paginate: { itemsPerPage: 5, currentPage: page }
+        "
+      >
         <img
           mat-card-image
           class="images"
@@ -58,7 +59,6 @@
           </mat-card-content>
         </div>
       </mat-card>
-    </li>
-  </ul>
+  </div>
   <pagination-controls (pageChange)="page = $event"></pagination-controls>
 </div>
