@@ -14,7 +14,7 @@ describe("Dropdwon test with Page Object Pattern", () => {
         navigationTo.dropdownPage()
       });
 
-    it.only("verify raiting list", () => {
+    it("verify raiting list", () => {
         onSlider.assertRating(1, 4)
     });
 
