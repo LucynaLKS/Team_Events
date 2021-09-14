@@ -1,4 +1,3 @@
-
 <div class="page">
   <h3>Ocena</h3>
   <app-slider (userChangeEvent)="filterPlaces($event)"></app-slider>
@@ -18,47 +17,52 @@
       >
     </mat-select>
   </mat-form-field>
+  <app-search (userChangeEvent)="searchPlaces($event)"></app-search>
+  Znalezione miejsca: {{ Places.length }}
   <div data-test="all-places" class="places">
-      <mat-card class="place-card"
-        data-test="list-places"
-        *ngFor="
-          let place of Places | paginate: { itemsPerPage: 5, currentPage: page }
-        "
-      >
-        <img
-          mat-card-image
-          class="images"
-          src="../../assets/images/{{ place.Id }}.jpg"
-        />
-        <div class="content">
-          <mat-card-header>
-            <mat-card-title data-test="card-title" class="title">{{ place.Name }}</mat-card-title>
-          </mat-card-header>
-          <app-rating data-test="rating" [rating]="place.Rating"></app-rating>
-  
-          <mat-card-content class="content">
-            <div class="description">
-              {{ place.Description }}
-            </div>
-            <div class="info">
-              {{ place.Address }}, Tel: {{ place.Phone }}, Link do strony:
-              <a href="{{ place.Link }}" target="_blank">{{ place.Link }}</a>
-              <br />
-              Maks. liczba osób: {{ place.Max_persons }}
-              <mat-chip-list>
-                <mat-chip
-                  *ngFor="let tag of place.Tag"
-                  color="primary"
-                  selected
-                  class="tag"
-                >
-                  {{ tag }}
-                </mat-chip>
-              </mat-chip-list>
-            </div>
-          </mat-card-content>
-        </div>
-      </mat-card>
+    <mat-card
+      class="place-card"
+      data-test="list-places"
+      *ngFor="
+        let place of Places | paginate: { itemsPerPage: 5, currentPage: page }
+      "
+    >
+      <img
+        mat-card-image
+        class="images"
+        src="../../assets/images/{{ place.Id }}.jpg"
+      />
+      <div class="content">
+        <mat-card-header>
+          <mat-card-title data-test="card-title" class="title">{{
+            place.Name
+          }}</mat-card-title>
+        </mat-card-header>
+        <app-rating data-test="rating" [rating]="place.Rating"></app-rating>
+
+        <mat-card-content class="content">
+          <div class="description">
+            {{ place.Description }}
+          </div>
+          <div class="info">
+            {{ place.Address }}, Tel: {{ place.Phone }}, Link do strony:
+            <a href="{{ place.Link }}" target="_blank">{{ place.Link }}</a>
+            <br />
+            Maks. liczba osób: {{ place.Max_persons }}
+            <mat-chip-list>
+              <mat-chip
+                *ngFor="let tag of place.Tag"
+                color="primary"
+                selected
+                class="tag"
+              >
+                {{ tag }}
+              </mat-chip>
+            </mat-chip-list>
+          </div>
+        </mat-card-content>
+      </div>
+    </mat-card>
   </div>
   <pagination-controls (pageChange)="page = $event"></pagination-controls>
 </div>

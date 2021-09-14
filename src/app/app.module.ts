@@ -6,6 +6,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { PlacesComponent } from './places/places.component';
@@ -17,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RatingComponent } from './rating/rating.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { SliderComponent } from './slider/slider.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,7 @@ import { SliderComponent } from './slider/slider.component';
     FooterComponent,
     RatingComponent,
     SliderComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,8 @@ import { SliderComponent } from './slider/slider.component';
     AppRoutingModule,
     MatBadgeModule,
     NgxSliderModule,
+    MatInputModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

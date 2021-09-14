@@ -4,6 +4,7 @@ import { Place } from '../../models/place';
 import { PaginatePipe } from 'ngx-pagination';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RangeInterface } from '../slider/slider.component';
+import { SearchInterface } from '../search/search.component';
 
 interface Sort {
   value: string;
@@ -107,6 +108,10 @@ export class PlacesComponent implements OnInit {
 
   filterPlaces(event: RangeInterface) {
     this.Places = this.PlacesService.getFilteredPlacesByRating(event);
+  }
+
+  searchPlaces(event: SearchInterface) {
+    this.Places = this.PlacesService.getFilteredPlacesByName(event);
   }
 
   fetchPlaces(): any {
