@@ -1,7 +1,14 @@
 <div class="search-box">
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Szukaj</mat-label>
-    <input data-test="input-search" matInput type="text" name="searchText" #searchText />
+    <input
+      data-test="input-search"
+      matInput
+      type="text"
+      name="searchText"
+      #searchText
+      [placeholder]="value"
+    />
   </mat-form-field>
   <button
     mat-fab

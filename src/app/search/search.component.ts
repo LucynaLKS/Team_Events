@@ -9,14 +9,12 @@ export interface SearchInterface {
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss'],
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
   @Output() userChangeEvent: EventEmitter<SearchInterface> =
     new EventEmitter<SearchInterface>();
-  constructor() {}
 
-  ngOnInit(): void {}
+  readonly value = 'Wpisz nazwę miejsca...';
 
-  value = 'Wpisz nazwę miejsca...';
   search(searchText: string) {
     this.userChangeEvent.emit({
       searchText,

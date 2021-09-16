@@ -1,32 +1,21 @@
-import { Component, OnInit, EventEmitter, Output} from '@angular/core';
-import { SearchInterface } from '../search/search.component';
-import { PlacesService } from '../places.service';
+import { Component, EventEmitter, Output } from '@angular/core';
+
 import { Place } from 'src/models/place';
+
+import { SearchInterface } from '../search/search.component';
 
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.component.html',
-  styleUrls: ['./side-bar.component.scss']
+  styleUrls: ['./side-bar.component.scss'],
 })
-export class SideBarComponent implements OnInit {
-  // @Output() userChangeEvent: EventEmitter<SearchInterface> =
-  // new EventEmitter<SearchInterface>();
+export class SideBarComponent {
+  @Output() searchPlacesEvent: EventEmitter<SearchInterface> =
+    new EventEmitter<SearchInterface>();
 
   Places: Place[] = [];
 
   searchPlaces(event: SearchInterface) {
-    this.Places = this.PlacesService.getFilteredPlacesByName(event);
+    this.searchPlacesEvent.emit(event);
   }
-
-  constructor(
-    private PlacesService: PlacesService,
-  ) {}
-
-  ngOnInit(): void {
-  }
-
-  fetchPlaces(): any {
-    this.Places = this.PlacesService.getPlaces();
-  }
-
 }
