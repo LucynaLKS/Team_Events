@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { PlacesService } from '../places.service';
 import { Place } from '../../models/place';
 import { PaginatePipe } from 'ngx-pagination';
@@ -19,7 +19,9 @@ interface Sort {
 export class PlacesComponent implements OnInit {
   @Output() rating = 0;
   page: number = 1;
-  Places: Place[] = [];
+
+  @Input()
+  places: Place[] = [];
 
   sort: Sort[] = [
     { value: 'No-sort', viewValue: 'Brak' },
@@ -38,10 +40,7 @@ export class PlacesComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.fetchPlaces();
-
     this.route.queryParams.subscribe((params) => {
-      console.log(params);
       if (params.order === 'alf-asc') {
         this.asc();
       } else if (params.order === 'alf-dsc') {
@@ -69,7 +68,7 @@ export class PlacesComponent implements OnInit {
   }
 
   ratingFromHigh() {
-    this.Places.sort((a, b) =>
+    this.places.sort((a, b) =>
       a.Rating < b.Rating ? 1 : b.Rating < a.Rating ? -1 : 0
     );
     this.page = 1;
@@ -77,7 +76,7 @@ export class PlacesComponent implements OnInit {
   }
 
   ratingFromLow() {
-    this.Places.sort((a, b) =>
+    this.places.sort((a, b) =>
       a.Rating > b.Rating ? 1 : b.Rating > a.Rating ? -1 : 0
     );
     this.page = 1;
@@ -85,13 +84,13 @@ export class PlacesComponent implements OnInit {
   }
 
   reset() {
-    this.Places.sort((a, b) => (a.Id > b.Id ? 1 : b.Id > a.Id ? -1 : 0));
+    this.places.sort((a, b) => (a.Id > b.Id ? 1 : b.Id > a.Id ? -1 : 0));
     this.page = 1;
     this.router.navigate(['/'], { queryParams: {} });
   }
 
   asc() {
-    this.Places.sort((a, b) =>
+    this.places.sort((a, b) =>
       a.Name > b.Name ? 1 : b.Name > a.Name ? -1 : 0
     );
     this.page = 1;
@@ -99,7 +98,7 @@ export class PlacesComponent implements OnInit {
   }
 
   desc() {
-    this.Places.sort((a, b) =>
+    this.places.sort((a, b) =>
       a.Name < b.Name ? 1 : b.Name < a.Name ? -1 : 0
     );
     this.page = 1;
@@ -107,14 +106,6 @@ export class PlacesComponent implements OnInit {
   }
 
   filterPlaces(event: RangeInterface) {
-    this.Places = this.PlacesService.getFilteredPlacesByRating(event);
-  }
-
-  searchPlaces(event: SearchInterface) {
-    this.Places = this.PlacesService.getFilteredPlacesByName(event);
-  }
-
-  fetchPlaces(): any {
-    this.Places = this.PlacesService.getPlaces();
+    this.places = this.PlacesService.getFilteredPlacesByRating(event);
   }
 }

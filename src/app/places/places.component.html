@@ -17,14 +17,14 @@
       >
     </mat-select>
   </mat-form-field>
-  <app-search (userChangeEvent)="searchPlaces($event)"></app-search>
-  Znalezione miejsca: {{ Places.length }}
+
+  Znalezione miejsca: {{ places.length }}
   <div data-test="all-places" class="places">
     <mat-card
       class="place-card"
       data-test="list-places"
       *ngFor="
-        let place of Places | paginate: { itemsPerPage: 5, currentPage: page }
+        let place of places | paginate: { itemsPerPage: 5, currentPage: page }
       "
     >
       <img

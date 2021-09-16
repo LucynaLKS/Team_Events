@@ -12,7 +12,7 @@ export interface RangeInterface {
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.scss'],
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent {
   @Input() rating: number = 0;
   @Output() userChangeEvent: EventEmitter<RangeInterface> =
     new EventEmitter<RangeInterface>();
@@ -24,11 +24,6 @@ export class SliderComponent implements OnInit {
     ceil: 5,
     step: 0.5,
   };
-  constructor(private PlacesComponent: PlacesComponent) {}
-
-  ngOnInit(): void {
-    this.filteringRating();
-  }
 
   filteringRating() {
     this.userChangeEvent.emit({
