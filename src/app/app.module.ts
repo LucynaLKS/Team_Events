@@ -48,6 +48,7 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     MatInputModule,
     MatIconModule,
   ],
+
   providers: [],
   bootstrap: [AppComponent],
 })
