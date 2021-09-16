@@ -20,6 +20,7 @@ import { RatingComponent } from './rating/rating.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { SliderComponent } from './slider/slider.component';
 import { SearchComponent } from './search/search.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SearchComponent } from './search/search.component';
     RatingComponent,
     SliderComponent,
     SearchComponent,
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,
