@@ -21,6 +21,7 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { SliderComponent } from './slider/slider.component';
 import { SearchComponent } from './search/search.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
+import { SortingComponent } from './sorting/sorting.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     SliderComponent,
     SearchComponent,
     SideBarComponent,
+    SortingComponent,
   ],
   imports: [
     BrowserModule,
