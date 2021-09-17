@@ -2,8 +2,15 @@
 <div class="div-view">
   <app-side-bar
     (searchPlacesEvent)="searchPlaces($event)"
+    (sortPlacesEvent)="sortPlaces($event)"
     class="side-bar"
   ></app-side-bar>
 </div>
-<app-places [places]="places"></app-places>
+<app-places
+  [places]="places"
+  [currentPage]="currentPaginationPage"
+></app-places>
+<pagination-controls
+  (pageChange)="handlePaginationChange($event)"
+></pagination-controls>
 <app-footer></app-footer>

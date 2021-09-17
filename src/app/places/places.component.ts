@@ -18,7 +18,9 @@ interface Sort {
 })
 export class PlacesComponent implements OnInit {
   @Output() rating = 0;
-  page: number = 1;
+
+  @Input()
+  currentPage: number = 1;
 
   @Input()
   places: Place[] = [];

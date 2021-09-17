@@ -1,7 +1,10 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Place } from 'src/models/place';
 import { SearchInterface } from '../search/search.component';
-import { sortInterface } from '../sorting/sorting.component';
+import {
+  SortInterface,
+  userChangeEventInterface,
+} from '../sorting/sorting.component';
 
 @Component({
   selector: 'app-side-bar',
@@ -11,8 +14,8 @@ import { sortInterface } from '../sorting/sorting.component';
 export class SideBarComponent {
   @Output() searchPlacesEvent: EventEmitter<SearchInterface> =
     new EventEmitter<SearchInterface>();
-  @Output() sortPlacesEvent: EventEmitter<sortInterface> =
-    new EventEmitter<sortInterface>();
+  @Output() sortPlacesEvent: EventEmitter<userChangeEventInterface> =
+    new EventEmitter<userChangeEventInterface>();
 
   Places: Place[] = [];
 
@@ -20,7 +23,7 @@ export class SideBarComponent {
     this.searchPlacesEvent.emit(event);
   }
 
-  sortPlaces(event: sortInterface) {
+  sortPlaces(event: userChangeEventInterface) {
     this.sortPlacesEvent.emit(event);
   }
 }

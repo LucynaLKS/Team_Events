@@ -8,7 +8,7 @@
       class="place-card"
       data-test="list-places"
       *ngFor="
-        let place of places | paginate: { itemsPerPage: 5, currentPage: page }
+        let place of places | paginate: { itemsPerPage: 5, currentPage }
       "
     >
       <img
@@ -48,5 +48,4 @@
       </div>
     </mat-card>
   </div>
-  <pagination-controls (pageChange)="page = $event"></pagination-controls>
 </div>
