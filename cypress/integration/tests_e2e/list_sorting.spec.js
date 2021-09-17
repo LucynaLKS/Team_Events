@@ -8,7 +8,8 @@ describe("List sorting", () => {
   
   it("The list should expand and select the element", () => {
     
-    cy.get('[data-test="sort-select"]').click();
+    cy.get('[data-test="sort-select"]')
+    .click();
     cy.get('[data-test="sort-option"]').contains('A-Z').click();
     cy.get(".mat-card-title").should("contain", "BLOKatowice");
 

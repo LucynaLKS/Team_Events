@@ -1,8 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable} from '@angular/core';
 import data from './data/places-katowice.json';
 import { Place } from '../models/place';
 import { RangeInterface } from './slider/slider.component';
 import { SearchInterface } from './search/search.component';
+
+
 @Injectable({
   providedIn: 'root',
 })

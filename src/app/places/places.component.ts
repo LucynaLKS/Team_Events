@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { PlacesService } from '../places.service';
 import { Place } from '../../models/place';
 import { PaginatePipe } from 'ngx-pagination';
@@ -18,8 +18,12 @@ interface Sort {
 })
 export class PlacesComponent implements OnInit {
   @Output() rating = 0;
-  page: number = 1;
-  Places: Place[] = [];
+
+  @Input()
+  currentPage: number = 1;
+
+  @Input()
+  places: Place[] = [];
 
   sort: Sort[] = [
     { value: 'No-sort', viewValue: 'Brak' },
@@ -37,84 +41,9 @@ export class PlacesComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {
-    this.fetchPlaces();
-
-    this.route.queryParams.subscribe((params) => {
-      console.log(params);
-      if (params.order === 'alf-asc') {
-        this.asc();
-      } else if (params.order === 'alf-dsc') {
-        this.desc();
-      } else if (params.order === 'rate-high') {
-        this.ratingFromHigh();
-      } else if (params.order === 'rate-low') {
-        this.ratingFromLow();
-      }
-    });
-  }
-
-  changeSort(value: string) {
-    if (value === 'No-sort') {
-      this.reset();
-    } else if (value === 'A-Z') {
-      this.asc();
-    } else if (value === 'Z-A') {
-      this.desc();
-    } else if (value === 'Rating-H') {
-      this.ratingFromHigh();
-    } else if (value === 'Rating-L') {
-      this.ratingFromLow();
-    }
-  }
-
-  ratingFromHigh() {
-    this.Places.sort((a, b) =>
-      a.Rating < b.Rating ? 1 : b.Rating < a.Rating ? -1 : 0
-    );
-    this.page = 1;
-    this.router.navigate(['/'], { queryParams: { order: 'rate-high' } });
-  }
-
-  ratingFromLow() {
-    this.Places.sort((a, b) =>
-      a.Rating > b.Rating ? 1 : b.Rating > a.Rating ? -1 : 0
-    );
-    this.page = 1;
-    this.router.navigate(['/'], { queryParams: { order: 'rate-low' } });
-  }
-
-  reset() {
-    this.Places.sort((a, b) => (a.Id > b.Id ? 1 : b.Id > a.Id ? -1 : 0));
-    this.page = 1;
-    this.router.navigate(['/'], { queryParams: {} });
-  }
-
-  asc() {
-    this.Places.sort((a, b) =>
-      a.Name > b.Name ? 1 : b.Name > a.Name ? -1 : 0
-    );
-    this.page = 1;
-    this.router.navigate(['/'], { queryParams: { order: 'alf-asc' } });
-  }
-
-  desc() {
-    this.Places.sort((a, b) =>
-      a.Name < b.Name ? 1 : b.Name < a.Name ? -1 : 0
-    );
-    this.page = 1;
-    this.router.navigate(['/'], { queryParams: { order: 'alf-dsc' } });
-  }
+  ngOnInit(): void {}
 
   filterPlaces(event: RangeInterface) {
-    this.Places = this.PlacesService.getFilteredPlacesByRating(event);
-  }
-
-  searchPlaces(event: SearchInterface) {
-    this.Places = this.PlacesService.getFilteredPlacesByName(event);
-  }
-
-  fetchPlaces(): any {
-    this.Places = this.PlacesService.getPlaces();
+    this.places = this.PlacesService.getFilteredPlacesByRating(event);
   }
 }
