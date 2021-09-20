@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Place } from 'src/models/place';
 import { PlacesService } from './places.service';
@@ -7,6 +7,7 @@ import {
   SortInterface,
   userChangeEventInterface,
 } from './sorting/sorting.component';
+import { RangeInterface } from './slider/slider.component';
 
 const DEFAULT_PAGINATION_PAGE = 1;
 
@@ -20,6 +21,10 @@ export class AppComponent implements OnInit {
 
   places: Place[] = [];
   currentPaginationPage = DEFAULT_PAGINATION_PAGE;
+  lowValue = 0;
+  highValue = 5;
+  @Input() userChangeEvent: EventEmitter<RangeInterface> =
+  new EventEmitter<RangeInterface>();
 
   constructor(
     private placesService: PlacesService,
@@ -45,6 +50,17 @@ export class AppComponent implements OnInit {
 
   handlePaginationChange(pageNumber: number) {
     this.currentPaginationPage = pageNumber;
+  }
+
+  /*filteringRating(event: RangeInterface) {
+    this.userChangeEvent.emit({
+      from: event.from,
+      to: event.to,
+    });
+  }*/
+
+  filterPlaces(event: RangeInterface) {
+    this.places = this.placesService.getFilteredPlacesByRating(event);
   }
 
   searchPlaces(event: SearchInterface) {

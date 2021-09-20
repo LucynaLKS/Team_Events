@@ -1,10 +1,12 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Place } from 'src/models/place';
 import { SearchInterface } from '../search/search.component';
 import {
   SortInterface,
   userChangeEventInterface,
 } from '../sorting/sorting.component';
+import { RangeInterface } from '../slider/slider.component';
+import { PlacesService } from '../places.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -16,8 +18,16 @@ export class SideBarComponent {
     new EventEmitter<SearchInterface>();
   @Output() sortPlacesEvent: EventEmitter<userChangeEventInterface> =
     new EventEmitter<userChangeEventInterface>();
+  @Output() fliterPlacesEvent: EventEmitter<RangeInterface> =
+  new EventEmitter<RangeInterface>();
+  
+    constructor(
+      private PlacesService: PlacesService,
+    ) {}
 
-  Places: Place[] = [];
+  @Output() rating = 0;
+
+  @Input()  places: Place[] = [];
 
   searchPlaces(event: SearchInterface) {
     this.searchPlacesEvent.emit(event);
@@ -25,5 +35,9 @@ export class SideBarComponent {
 
   sortPlaces(event: userChangeEventInterface) {
     this.sortPlacesEvent.emit(event);
+  }
+
+  filterPlacesByRating(event: RangeInterface) {
+    this.fliterPlacesEvent.emit(event);
   }
 }
