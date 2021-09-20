@@ -52,13 +52,6 @@ export class AppComponent implements OnInit {
     this.currentPaginationPage = pageNumber;
   }
 
-  /*filteringRating(event: RangeInterface) {
-    this.userChangeEvent.emit({
-      from: event.from,
-      to: event.to,
-    });
-  }*/
-
   filterPlaces(event: RangeInterface) {
     this.places = this.placesService.getFilteredPlacesByRating(event);
   }
