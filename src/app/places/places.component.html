@@ -1,5 +1,7 @@
 <div class="page">
-  Znalezione miejsca: {{ places.length }}
+  <div class="places-count">
+    Znalezione miejsca: <strong>{{ places.length }}</strong>
+  </div>
   <div data-test="all-places" class="places">
     <ng-container
       *ngFor="
