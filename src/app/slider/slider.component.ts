@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Options } from '@angular-slider/ngx-slider';
-import { PlacesComponent } from '../places/places.component';
 
 export interface RangeInterface {
   from: number;

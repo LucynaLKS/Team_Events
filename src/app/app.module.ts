@@ -22,6 +22,7 @@ import { SliderComponent } from './slider/slider.component';
 import { SearchComponent } from './search/search.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { SortingComponent } from './sorting/sorting.component';
+import { AdsComponent } from './ads/ads.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { SortingComponent } from './sorting/sorting.component';
     SearchComponent,
     SideBarComponent,
     SortingComponent,
+    AdsComponent,
   ],
   imports: [
     BrowserModule,
