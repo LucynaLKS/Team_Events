@@ -21,8 +21,8 @@ export class AppComponent implements OnInit {
 
   places: Place[] = [];
   currentPaginationPage = DEFAULT_PAGINATION_PAGE;
-  lowValue = 0;
-  highValue = 5;
+  private lowValue = 0;
+  private highValue = 5;
   @Input() userChangeEvent: EventEmitter<RangeInterface> =
   new EventEmitter<RangeInterface>();
 
