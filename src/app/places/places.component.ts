@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { PlacesService } from '../places.service';
-import { Place } from '../../models/place'
+import { Place } from '../../models/place';
 import { ActivatedRoute, Router } from '@angular/router';
 
 interface Sort {
@@ -22,6 +22,8 @@ export class PlacesComponent implements OnInit {
   @Input()
   places: Place[] = [];
 
+  adIndex: number[] = [2, 4];
+
   sort: Sort[] = [
     { value: 'No-sort', viewValue: 'Brak' },
     { value: 'A-Z', viewValue: 'A-Z' },
@@ -39,4 +41,8 @@ export class PlacesComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {}
+
+  showAd(index: number): boolean {
+    return this.adIndex.includes(index);
+  }
 }
