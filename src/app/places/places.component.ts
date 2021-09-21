@@ -22,7 +22,7 @@ export class PlacesComponent implements OnInit {
   @Input()
   places: Place[] = [];
 
-  adIndex: number[] = [2];
+  adIndex: number[] = [1];
 
   sort: Sort[] = [
     { value: 'No-sort', viewValue: 'Brak' },
