@@ -21,8 +21,8 @@ export class AppComponent implements OnInit {
 
   places: Place[] = [];
   currentPaginationPage = DEFAULT_PAGINATION_PAGE;
-  lowValue = 0;
-  highValue = 5;
+  private lowValue = 0;
+  private highValue = 5;
   @Input() userChangeEvent: EventEmitter<RangeInterface> =
   new EventEmitter<RangeInterface>();
 
@@ -51,13 +51,6 @@ export class AppComponent implements OnInit {
   handlePaginationChange(pageNumber: number) {
     this.currentPaginationPage = pageNumber;
   }
-
-  /*filteringRating(event: RangeInterface) {
-    this.userChangeEvent.emit({
-      from: event.from,
-      to: event.to,
-    });
-  }*/
 
   filterPlaces(event: RangeInterface) {
     this.places = this.placesService.getFilteredPlacesByRating(event);

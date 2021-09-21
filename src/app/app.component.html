@@ -1,17 +1,16 @@
 <h1 data-test="header" class="header">Team Events</h1>
-<div class="div-view">
+<div class="side-bar">
   <app-side-bar
     (searchPlacesEvent)="searchPlaces($event)"
     (sortPlacesEvent)="sortPlaces($event)"
-    class="side-bar"
     (fliterPlacesEvent)="filterPlaces($event)"
   ></app-side-bar>
 </div>
-<app-places
+<app-places class="view"
   [places]="places"
   [currentPage]="currentPaginationPage"
 ></app-places>
-<pagination-controls
+<pagination-controls class="pagination"
   (pageChange)="handlePaginationChange($event)"
 ></pagination-controls>
 <app-footer></app-footer>

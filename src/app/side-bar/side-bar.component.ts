@@ -6,7 +6,6 @@ import {
   userChangeEventInterface,
 } from '../sorting/sorting.component';
 import { RangeInterface } from '../slider/slider.component';
-import { PlacesService } from '../places.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -21,14 +20,6 @@ export class SideBarComponent {
   @Output() fliterPlacesEvent: EventEmitter<RangeInterface> =
   new EventEmitter<RangeInterface>();
   
-    constructor(
-      private PlacesService: PlacesService,
-    ) {}
-
-  @Output() rating = 0;
-
-  @Input()  places: Place[] = [];
-
   searchPlaces(event: SearchInterface) {
     this.searchPlacesEvent.emit(event);
   }
