@@ -1,10 +1,7 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { PlacesService } from '../places.service';
-import { Place } from '../../models/place';
-import { PaginatePipe } from 'ngx-pagination';
+import { Place } from '../../models/place'
 import { ActivatedRoute, Router } from '@angular/router';
-import { RangeInterface } from '../slider/slider.component';
-import { SearchInterface } from '../search/search.component';
 
 interface Sort {
   value: string;
@@ -42,8 +39,4 @@ export class PlacesComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {}
-
-  filterPlaces(event: RangeInterface) {
-    this.places = this.PlacesService.getFilteredPlacesByRating(event);
-  }
 }
