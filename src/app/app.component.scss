@@ -27,15 +27,15 @@
   padding: 15px;
 
   @media (min-width: 992px) {
-  top: 100px;
-  z-index: 1;
-  position: sticky;
+    top: 100px;
+    z-index: 1;
+    position: sticky;
   }
 }
 
 .view {
   @media (min-width: 992px) {
-  display: flex;
+    display: flex;
   }
 }
 

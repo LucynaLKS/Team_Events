@@ -13,7 +13,7 @@ interface AdInterface {
 export class AdsComponent implements OnInit {
   ad: AdInterface;
 
-  private readonly ads: AdInterface[] = [
+  private ads: AdInterface[] = [
     {
       img: 'https://via.placeholder.com/728x90.png/FFFF00/000000?text=Team+App+AD',
       url: 'https://hyland.com',
