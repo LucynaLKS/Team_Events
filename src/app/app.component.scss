@@ -22,20 +22,20 @@
 .side-bar {
   height: 100%;
   width: 250px;
-  margin: 20px;
+  margin: 20px auto;
   background-color: #f7f5f5;
   padding: 15px;
 
   @media (min-width: 992px) {
-  top: 100px;
-  z-index: 1;
-  position: sticky;
+    top: 100px;
+    z-index: 1;
+    position: sticky;
   }
 }
 
 .view {
   @media (min-width: 992px) {
-  display: flex;
+    display: flex;
   }
 }
 
