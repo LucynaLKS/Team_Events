@@ -65,16 +65,10 @@ export class AppComponent implements OnInit {
   //rating
   filterPlacesByRating(event: RangeInterface) {
     this.selectedOptions;
-    // this.places = this.placesService.getFilteredPlacesByRating(event);
-  }
-
-  searchPlaces(event: SearchInterface) {
-    // this.places = this.placesService.getFilteredPlacesByName(event);
   }
 
   sortPlaces(event: userChangeEventInterface) {
     const { selectedOption } = event;
-    // this.placesService.getPlaces(selectedOption);
     this.resetPagination();
   }
 
