@@ -7,28 +7,49 @@ import {
 } from '../sorting/sorting.component';
 import { RangeInterface } from '../slider/slider.component';
 
+export interface selectedOptionsInterface {
+  searchPlaces: string;
+  sortPlaces: string;
+  filterPlacesByRating: RangeInterface;
+}
+
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.component.html',
   styleUrls: ['./side-bar.component.scss'],
 })
 export class SideBarComponent {
-  @Output() searchPlacesEvent: EventEmitter<SearchInterface> =
-    new EventEmitter<SearchInterface>();
-  @Output() sortPlacesEvent: EventEmitter<userChangeEventInterface> =
-    new EventEmitter<userChangeEventInterface>();
-  @Output() fliterPlacesEvent: EventEmitter<RangeInterface> =
-  new EventEmitter<RangeInterface>();
-  
+  // @Output() searchPlacesEvent: EventEmitter<SearchInterface> =
+  //   new EventEmitter<SearchInterface>();
+  // @Output() sortPlacesEvent: EventEmitter<userChangeEventInterface> =
+  //   new EventEmitter<userChangeEventInterface>();
+  // @Output() filterPlacesEvent: EventEmitter<RangeInterface> =
+  // new EventEmitter<RangeInterface>();
+
+  @Output() selectedOptionsEvent: EventEmitter<selectedOptionsInterface> =
+    new EventEmitter<selectedOptionsInterface>();
+
+  private selectedOptions: selectedOptionsInterface = {
+    searchPlaces: '',
+    sortPlaces: 'No-sort',
+    filterPlacesByRating: {
+      from: 0,
+      to: 5,
+    },
+  };
+
   searchPlaces(event: SearchInterface) {
-    this.searchPlacesEvent.emit(event);
+    this.selectedOptions.searchPlaces = event.searchText;
+    this.selectedOptionsEvent.emit(this.selectedOptions);
   }
 
   sortPlaces(event: userChangeEventInterface) {
-    this.sortPlacesEvent.emit(event);
+    this.selectedOptions.sortPlaces = event.selectedOption;
+    this.selectedOptionsEvent.emit(this.selectedOptions);
   }
 
   filterPlacesByRating(event: RangeInterface) {
-    this.fliterPlacesEvent.emit(event);
+    this.selectedOptions.filterPlacesByRating = event;
+    this.selectedOptionsEvent.emit(this.selectedOptions);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Place } from 'src/models/place';
 import { PlacesService } from './places.service';
@@ -8,6 +8,7 @@ import {
   userChangeEventInterface,
 } from './sorting/sorting.component';
 import { RangeInterface } from './slider/slider.component';
+import { selectedOptionsInterface } from './side-bar/side-bar.component';
 
 const DEFAULT_PAGINATION_PAGE = 1;
 
@@ -21,10 +22,11 @@ export class AppComponent implements OnInit {
 
   places: Place[] = [];
   currentPaginationPage = DEFAULT_PAGINATION_PAGE;
-  private lowValue = 0;
-  private highValue = 5;
+
   @Input() userChangeEvent: EventEmitter<RangeInterface> =
-  new EventEmitter<RangeInterface>();
+    new EventEmitter<RangeInterface>();
+
+  private selectedOptions: string[] = [];
 
   constructor(
     private placesService: PlacesService,
@@ -48,71 +50,52 @@ export class AppComponent implements OnInit {
     });
   }
 
+  handleSelectedOptionsEvent(
+    selectedOptionsEvent: selectedOptionsInterface
+  ): void {
+    console.log('selectedOptionsEvent', selectedOptionsEvent);
+
+    this.places = this.placesService.filterPlaces(selectedOptionsEvent);
+  }
+
   handlePaginationChange(pageNumber: number) {
     this.currentPaginationPage = pageNumber;
   }
 
-  filterPlaces(event: RangeInterface) {
-    this.places = this.placesService.getFilteredPlacesByRating(event);
+  //rating
+  filterPlacesByRating(event: RangeInterface) {
+    this.selectedOptions;
+    // this.places = this.placesService.getFilteredPlacesByRating(event);
   }
 
   searchPlaces(event: SearchInterface) {
-    this.places = this.placesService.getFilteredPlacesByName(event);
+    // this.places = this.placesService.getFilteredPlacesByName(event);
   }
 
   sortPlaces(event: userChangeEventInterface) {
     const { selectedOption } = event;
+    // this.placesService.getPlaces(selectedOption);
     this.resetPagination();
-
-    if (selectedOption === 'No-sort') {
-      this.reset();
-    } else if (selectedOption === 'A-Z') {
-      this.asc();
-    } else if (selectedOption === 'Z-A') {
-      this.desc();
-    } else if (selectedOption === 'Rating-H') {
-      this.ratingFromHigh();
-    } else if (selectedOption === 'Rating-L') {
-      this.ratingFromLow();
-    }
   }
 
   // TODO: below sorting methods should be extracted to separate service
   ratingFromHigh() {
-    this.places.sort((a, b) =>
-      a.Rating < b.Rating ? 1 : b.Rating < a.Rating ? -1 : 0
-    );
-
     this.router.navigate(['/'], { queryParams: { order: 'rate-high' } });
   }
 
   ratingFromLow() {
-    this.places.sort((a, b) =>
-      a.Rating > b.Rating ? 1 : b.Rating > a.Rating ? -1 : 0
-    );
-
     this.router.navigate(['/'], { queryParams: { order: 'rate-low' } });
   }
 
   reset() {
-    this.places.sort((a, b) => (a.Id > b.Id ? 1 : b.Id > a.Id ? -1 : 0));
-
     this.router.navigate(['/'], { queryParams: {} });
   }
 
   asc() {
-    this.places.sort((a, b) =>
-      a.Name > b.Name ? 1 : b.Name > a.Name ? -1 : 0
-    );
-
     this.router.navigate(['/'], { queryParams: { order: 'alf-asc' } });
   }
 
   desc() {
-    this.places.sort((a, b) =>
-      a.Name < b.Name ? 1 : b.Name < a.Name ? -1 : 0
-    );
-
     this.router.navigate(['/'], { queryParams: { order: 'alf-dsc' } });
   }
 
