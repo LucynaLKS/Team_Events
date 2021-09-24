@@ -19,7 +19,7 @@ describe("List sorting", () => {
 
     cy.get('[data-test="sort-select"]').click();
     cy.get('[data-test="sort-option"]').contains('Ocena od najwyższej').click();
-    cy.get('.title').should("contain", "Vinoteka");
+    cy.get('.title').should("contain", "Quest Cage Escape Room");
 
     cy.get('[data-test="sort-select"]').click();
     cy.get('[data-test="sort-option"]').contains('Ocena od najniższej').click();
