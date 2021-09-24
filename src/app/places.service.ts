@@ -4,7 +4,7 @@ import { Place } from '../models/place';
 import { RangeInterface } from './slider/slider.component';
 import { SearchInterface } from './search/search.component';
 import { SelectedOptionsInterface } from './side-bar/side-bar.component';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',

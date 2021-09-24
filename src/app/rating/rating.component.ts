@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Place } from 'src/models/place';
 
 @Component({
   selector: 'app-rating',
