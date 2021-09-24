@@ -4,6 +4,7 @@ import { Place } from '../models/place';
 import { RangeInterface } from './slider/slider.component';
 import { SearchInterface } from './search/search.component';
 import { SelectedOptionsInterface } from './side-bar/side-bar.component';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -11,10 +12,15 @@ import { SelectedOptionsInterface } from './side-bar/side-bar.component';
 export class PlacesService {
   private places: Place[] = data;
 
-  constructor() {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
+
   getPlaces(): Place[] {
     return data;
   }
+
 
   filterPlaces(selectedOptions: SelectedOptionsInterface): Place[] {
     this.places = data;
@@ -71,12 +77,14 @@ export class PlacesService {
     this.places = this.places.sort((a, b) =>
       a.Rating < b.Rating ? 1 : b.Rating < a.Rating ? -1 : 0
     );
+    this.router.navigate(['/'], { queryParams: { order: 'Rating-H' } });
   }
 
   ratingFromLow() {
     this.places = this.places.sort((a, b) =>
       a.Rating > b.Rating ? 1 : b.Rating > a.Rating ? -1 : 0
     );
+    this.router.navigate(['/'], { queryParams: { order: 'Rating-L' } });
   }
 
   reset() {
@@ -87,11 +95,13 @@ export class PlacesService {
     this.places = this.places.sort((a, b) =>
       a.Name > b.Name ? 1 : b.Name > a.Name ? -1 : 0
     );
+    this.router.navigate(['/'], { queryParams: { order: 'A-Z' } });
   }
 
   desc() {
     this.places = this.places.sort((a, b) =>
       a.Name < b.Name ? 1 : b.Name < a.Name ? -1 : 0
     );
+    this.router.navigate(['/'], { queryParams: { order: 'Z-A' } });
   }
 }

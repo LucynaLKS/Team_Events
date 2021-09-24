@@ -38,13 +38,13 @@ export class AppComponent implements OnInit {
     this.places = this.placesService.getPlaces();
 
     this.route.queryParams.subscribe((params) => {
-      if (params.order === 'alf-asc') {
+      if (params.order === 'A-Z') {
         this.asc();
-      } else if (params.order === 'alf-dsc') {
+      } else if (params.order === 'Z-A') {
         this.desc();
-      } else if (params.order === 'rate-high') {
+      } else if (params.order === 'Rating-H') {
         this.ratingFromHigh();
-      } else if (params.order === 'rate-low') {
+      } else if (params.order === 'Rating-L') {
         this.ratingFromLow();
       }
 
@@ -82,11 +82,13 @@ export class AppComponent implements OnInit {
 
   // TODO: below sorting methods should be extracted to separate service
   ratingFromHigh() {
-    this.router.navigate(['/'], { queryParams: { order: 'rate-high' } });
+    this.router.navigate(['/'], { queryParams: { order: 'Rating-H' } });
+    //this.router.navigate(['/'], { queryParams: { order: 'rate-high' } });
   }
 
   ratingFromLow() {
-    this.router.navigate(['/'], { queryParams: { order: 'rate-low' } });
+    this.router.navigate(['/'], { queryParams: { order: 'Rating-L' } });
+    // this.router.navigate(['/'], { queryParams: { order: 'rate-low' } });
   }
 
   reset() {
@@ -94,11 +96,13 @@ export class AppComponent implements OnInit {
   }
 
   asc() {
-    this.router.navigate(['/'], { queryParams: { order: 'alf-asc' } });
+    this.router.navigate(['/'], { queryParams: { order: 'A-Z' } });
+    // this.router.navigate(['/'], { queryParams: { order: 'alf-asc' } });
   }
 
   desc() {
-    this.router.navigate(['/'], { queryParams: { order: 'alf-dsc' } });
+    this.router.navigate(['/'], { queryParams: { order: 'Z-A' } });
+    // this.router.navigate(['/'], { queryParams: { order: 'alf-dsc' } });
   }
 
   private resetPagination(): void {
