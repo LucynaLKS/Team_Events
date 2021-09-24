@@ -12,15 +12,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class PlacesService {
   private places: Place[] = data;
 
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
+  constructor(private router: Router) {}
 
   getPlaces(): Place[] {
     return data;
   }
-
 
   filterPlaces(selectedOptions: SelectedOptionsInterface): Place[] {
     this.places = data;
