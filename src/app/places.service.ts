@@ -17,84 +17,80 @@ export class PlacesService {
   }
 
   filterPlaces(selectedOptions: selectedOptionsInterface): Place[] {
-    let output = data;
+    this.places = data;
 
     if (selectedOptions.searchPlaces) {
-      output = this.getFilteredPlacesByName(output, {
+      this.getFilteredPlacesByName({
         searchText: selectedOptions.searchPlaces,
       });
     }
 
     if (selectedOptions.filterPlacesByRating) {
-      output = this.getFilteredPlacesByRating(output, {
+      this.getFilteredPlacesByRating({
         from: selectedOptions.filterPlacesByRating.from,
         to: selectedOptions.filterPlacesByRating.to,
       });
     }
 
     if (selectedOptions.sortPlaces) {
-      output = this.sortPlaces(output, selectedOptions.sortPlaces);
+      this.sortPlaces(selectedOptions.sortPlaces);
     }
 
-    return output;
+    return this.places;
   }
 
-  sortPlaces(places: Place[], selectedOption: string) {
-    let output = data;
-
+  sortPlaces(selectedOption: string) {
     if (selectedOption === 'No-sort') {
-      output = this.reset(places);
+      this.reset();
     } else if (selectedOption === 'A-Z') {
-      output = this.asc(places);
+      this.asc();
     } else if (selectedOption === 'Z-A') {
-      output = this.desc(places);
+      this.desc();
     } else if (selectedOption === 'Rating-H') {
-      output = this.ratingFromHigh(places);
+      this.ratingFromHigh();
     } else if (selectedOption === 'Rating-L') {
-      output = this.ratingFromLow(places);
+      this.ratingFromLow();
     }
-
-    return output;
   }
 
-  getFilteredPlacesByRating(places: Place[], options: RangeInterface): Place[] {
-    return places.filter((place: Place) => {
+  getFilteredPlacesByRating(options: RangeInterface) {
+    this.places = this.places.filter((place: Place) => {
       return place.Rating >= options.from && place.Rating <= options.to;
     });
   }
 
-  getFilteredPlacesByName(places: Place[], options: SearchInterface): Place[] {
-    return places.filter((place: Place) => {
+  getFilteredPlacesByName(options: SearchInterface) {
+    this.places = this.places.filter((place: Place) => {
       return place.Name.toLowerCase()
         .split(' ')
         .includes(options.searchText.trim().toLowerCase());
     });
   }
 
-  ratingFromHigh(places: Place[]) {
-    return places.sort((a, b) =>
+  ratingFromHigh() {
+    this.places = this.places.sort((a, b) =>
       a.Rating < b.Rating ? 1 : b.Rating < a.Rating ? -1 : 0
     );
   }
 
-  ratingFromLow(places: Place[]) {
-    return places.sort((a, b) =>
+  ratingFromLow() {
+    this.places = this.places.sort((a, b) =>
       a.Rating > b.Rating ? 1 : b.Rating > a.Rating ? -1 : 0
     );
   }
 
-  reset(places: Place[]) {
-    return places.sort((a, b) => (a.Id > b.Id ? 1 : b.Id > a.Id ? -1 : 0));
+  reset() {
+    this.places = data;
   }
 
-  asc(places: Place[]) {
-    return places.sort((a, b) =>
+  asc() {
+    this.places = this.places.sort((a, b) =>
       a.Name > b.Name ? 1 : b.Name > a.Name ? -1 : 0
     );
   }
 
-  desc(places: Place[]) {
-    return places.sort((a, b) =>
+  desc() {
+    this.places = this.places.sort((a, b) =>
       a.Name < b.Name ? 1 : b.Name < a.Name ? -1 : 0
     );
   }
