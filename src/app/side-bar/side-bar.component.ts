@@ -7,7 +7,7 @@ import {
 } from '../sorting/sorting.component';
 import { RangeInterface } from '../slider/slider.component';
 
-export interface selectedOptionsInterface {
+export interface SelectedOptionsInterface {
   searchPlaces: string;
   sortPlaces: string;
   filterPlacesByRating: RangeInterface;
@@ -19,10 +19,10 @@ export interface selectedOptionsInterface {
   styleUrls: ['./side-bar.component.scss'],
 })
 export class SideBarComponent {
-  @Output() selectedOptionsEvent: EventEmitter<selectedOptionsInterface> =
-    new EventEmitter<selectedOptionsInterface>();
+  @Output() selectedOptionsEvent: EventEmitter<SelectedOptionsInterface> =
+    new EventEmitter<SelectedOptionsInterface>();
 
-  private selectedOptions: selectedOptionsInterface = {
+  private selectedOptions: SelectedOptionsInterface = {
     searchPlaces: '',
     sortPlaces: 'No-sort',
     filterPlacesByRating: {

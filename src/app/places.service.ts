@@ -3,7 +3,7 @@ import data from './data/places-katowice.json';
 import { Place } from '../models/place';
 import { RangeInterface } from './slider/slider.component';
 import { SearchInterface } from './search/search.component';
-import { selectedOptionsInterface } from './side-bar/side-bar.component';
+import { SelectedOptionsInterface } from './side-bar/side-bar.component';
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +16,7 @@ export class PlacesService {
     return data;
   }
 
-  filterPlaces(selectedOptions: selectedOptionsInterface): Place[] {
+  filterPlaces(selectedOptions: SelectedOptionsInterface): Place[] {
     this.places = data;
 
     if (selectedOptions.searchPlaces) {

@@ -8,7 +8,7 @@ import {
   userChangeEventInterface,
 } from './sorting/sorting.component';
 import { RangeInterface } from './slider/slider.component';
-import { selectedOptionsInterface } from './side-bar/side-bar.component';
+import { SelectedOptionsInterface } from './side-bar/side-bar.component';
 
 const DEFAULT_PAGINATION_PAGE = 1;
 
@@ -47,11 +47,21 @@ export class AppComponent implements OnInit {
       } else if (params.order === 'rate-low') {
         this.ratingFromLow();
       }
+
+      const sortParams: SelectedOptionsInterface = {
+        searchPlaces: '',
+        sortPlaces: params.order,
+        filterPlacesByRating: {
+          from: 0,
+          to: 5,
+        },
+      };
+      this.places = this.placesService.filterPlaces(sortParams);
     });
   }
 
   handleSelectedOptionsEvent(
-    selectedOptionsEvent: selectedOptionsInterface
+    selectedOptionsEvent: SelectedOptionsInterface
   ): void {
     this.places = this.placesService.filterPlaces(selectedOptionsEvent);
   }
