@@ -32,21 +32,29 @@ export class PlacesService {
       });
     }
 
+    if (selectedOptions.sortPlaces) {
+      output = this.sortPlaces(output, selectedOptions.sortPlaces);
+    }
+
     return output;
   }
 
-  sortPlaces(selectedOption: string) {
+  sortPlaces(places: Place[], selectedOption: string) {
+    let output = data;
+
     if (selectedOption === 'No-sort') {
-      this.reset();
+      output = this.reset(places);
     } else if (selectedOption === 'A-Z') {
-      this.asc();
+      output = this.asc(places);
     } else if (selectedOption === 'Z-A') {
-      this.desc();
+      output = this.desc(places);
     } else if (selectedOption === 'Rating-H') {
-      this.ratingFromHigh();
+      output = this.ratingFromHigh(places);
     } else if (selectedOption === 'Rating-L') {
-      this.ratingFromLow();
+      output = this.ratingFromLow(places);
     }
+
+    return output;
   }
 
   getFilteredPlacesByRating(places: Place[], options: RangeInterface): Place[] {
@@ -63,30 +71,30 @@ export class PlacesService {
     });
   }
 
-  ratingFromHigh() {
-    this.places.sort((a, b) =>
+  ratingFromHigh(places: Place[]) {
+    return places.sort((a, b) =>
       a.Rating < b.Rating ? 1 : b.Rating < a.Rating ? -1 : 0
     );
   }
 
-  ratingFromLow() {
-    this.places.sort((a, b) =>
+  ratingFromLow(places: Place[]) {
+    return places.sort((a, b) =>
       a.Rating > b.Rating ? 1 : b.Rating > a.Rating ? -1 : 0
     );
   }
 
-  reset() {
-    this.places.sort((a, b) => (a.Id > b.Id ? 1 : b.Id > a.Id ? -1 : 0));
+  reset(places: Place[]) {
+    return places.sort((a, b) => (a.Id > b.Id ? 1 : b.Id > a.Id ? -1 : 0));
   }
 
-  asc() {
-    this.places.sort((a, b) =>
+  asc(places: Place[]) {
+    return places.sort((a, b) =>
       a.Name > b.Name ? 1 : b.Name > a.Name ? -1 : 0
     );
   }
 
-  desc() {
-    this.places.sort((a, b) =>
+  desc(places: Place[]) {
+    return places.sort((a, b) =>
       a.Name < b.Name ? 1 : b.Name < a.Name ? -1 : 0
     );
   }

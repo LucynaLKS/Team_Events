@@ -53,8 +53,6 @@ export class AppComponent implements OnInit {
   handleSelectedOptionsEvent(
     selectedOptionsEvent: selectedOptionsInterface
   ): void {
-    console.log('selectedOptionsEvent', selectedOptionsEvent);
-
     this.places = this.placesService.filterPlaces(selectedOptionsEvent);
   }
 

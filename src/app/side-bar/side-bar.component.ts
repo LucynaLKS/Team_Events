@@ -19,13 +19,6 @@ export interface selectedOptionsInterface {
   styleUrls: ['./side-bar.component.scss'],
 })
 export class SideBarComponent {
-  // @Output() searchPlacesEvent: EventEmitter<SearchInterface> =
-  //   new EventEmitter<SearchInterface>();
-  // @Output() sortPlacesEvent: EventEmitter<userChangeEventInterface> =
-  //   new EventEmitter<userChangeEventInterface>();
-  // @Output() filterPlacesEvent: EventEmitter<RangeInterface> =
-  // new EventEmitter<RangeInterface>();
-
   @Output() selectedOptionsEvent: EventEmitter<selectedOptionsInterface> =
     new EventEmitter<selectedOptionsInterface>();
 
