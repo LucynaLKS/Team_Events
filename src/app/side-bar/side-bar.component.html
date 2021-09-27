@@ -1,4 +1,13 @@
-<h3 class="slider-title">Ocena</h3><app-slider class="slider"(userChangeEvent)="filterPlacesByRating($event)"></app-slider>
-<app-search class="search" (userChangeEvent)="searchPlaces($event)"></app-search>
-
-<app-sorting class="sorting"(userChangeEvent)="sortPlaces($event)"></app-sorting>
+<h3 class="slider-title">Ocena</h3>
+<app-slider
+  class="slider"
+  (userChangeEvent)="filterPlacesByRating($event)"
+></app-slider>
+<app-search
+  class="search"
+  (userChangeEvent)="searchPlaces($event)"
+></app-search>
+<app-sorting
+  class="sorting"
+  (userChangeEvent)="sortPlaces($event)"
+></app-sorting>

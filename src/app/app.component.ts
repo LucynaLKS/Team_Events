@@ -1,13 +1,8 @@
-import { Component, OnInit, Input, EventEmitter} from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { Place } from 'src/models/place';
 import { PlacesService } from './places.service';
-import { SearchInterface } from './search/search.component';
-import {
-  SortInterface,
-  userChangeEventInterface,
-} from './sorting/sorting.component';
 import { RangeInterface } from './slider/slider.component';
+import { SelectedOptionsInterface } from './side-bar/side-bar.component';
 
 const DEFAULT_PAGINATION_PAGE = 1;
 
@@ -21,99 +16,26 @@ export class AppComponent implements OnInit {
 
   places: Place[] = [];
   currentPaginationPage = DEFAULT_PAGINATION_PAGE;
-  private lowValue = 0;
-  private highValue = 5;
-  @Input() userChangeEvent: EventEmitter<RangeInterface> =
-  new EventEmitter<RangeInterface>();
 
-  constructor(
-    private placesService: PlacesService,
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
+  @Input() userChangeEvent: EventEmitter<RangeInterface> =
+    new EventEmitter<RangeInterface>();
+
+  constructor(private placesService: PlacesService) {}
 
   ngOnInit(): void {
     this.places = this.placesService.getPlaces();
+  }
 
-    this.route.queryParams.subscribe((params) => {
-      if (params.order === 'alf-asc') {
-        this.asc();
-      } else if (params.order === 'alf-dsc') {
-        this.desc();
-      } else if (params.order === 'rate-high') {
-        this.ratingFromHigh();
-      } else if (params.order === 'rate-low') {
-        this.ratingFromLow();
-      }
-    });
+  handleSelectedOptionsEvent(
+    selectedOptionsEvent: SelectedOptionsInterface
+  ): void {
+    this.resetPagination();
+
+    this.places = this.placesService.filterPlaces(selectedOptionsEvent);
   }
 
   handlePaginationChange(pageNumber: number) {
     this.currentPaginationPage = pageNumber;
-  }
-
-  filterPlaces(event: RangeInterface) {
-    this.places = this.placesService.getFilteredPlacesByRating(event);
-  }
-
-  searchPlaces(event: SearchInterface) {
-    this.places = this.placesService.getFilteredPlacesByName(event);
-  }
-
-  sortPlaces(event: userChangeEventInterface) {
-    const { selectedOption } = event;
-    this.resetPagination();
-
-    if (selectedOption === 'No-sort') {
-      this.reset();
-    } else if (selectedOption === 'A-Z') {
-      this.asc();
-    } else if (selectedOption === 'Z-A') {
-      this.desc();
-    } else if (selectedOption === 'Rating-H') {
-      this.ratingFromHigh();
-    } else if (selectedOption === 'Rating-L') {
-      this.ratingFromLow();
-    }
-  }
-
-  // TODO: below sorting methods should be extracted to separate service
-  ratingFromHigh() {
-    this.places.sort((a, b) =>
-      a.Rating < b.Rating ? 1 : b.Rating < a.Rating ? -1 : 0
-    );
-
-    this.router.navigate(['/'], { queryParams: { order: 'rate-high' } });
-  }
-
-  ratingFromLow() {
-    this.places.sort((a, b) =>
-      a.Rating > b.Rating ? 1 : b.Rating > a.Rating ? -1 : 0
-    );
-
-    this.router.navigate(['/'], { queryParams: { order: 'rate-low' } });
-  }
-
-  reset() {
-    this.places.sort((a, b) => (a.Id > b.Id ? 1 : b.Id > a.Id ? -1 : 0));
-
-    this.router.navigate(['/'], { queryParams: {} });
-  }
-
-  asc() {
-    this.places.sort((a, b) =>
-      a.Name > b.Name ? 1 : b.Name > a.Name ? -1 : 0
-    );
-
-    this.router.navigate(['/'], { queryParams: { order: 'alf-asc' } });
-  }
-
-  desc() {
-    this.places.sort((a, b) =>
-      a.Name < b.Name ? 1 : b.Name < a.Name ? -1 : 0
-    );
-
-    this.router.navigate(['/'], { queryParams: { order: 'alf-dsc' } });
   }
 
   private resetPagination(): void {

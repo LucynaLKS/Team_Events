@@ -2,9 +2,7 @@
 <div class="container">
   <div class="side-bar">
     <app-side-bar
-      (searchPlacesEvent)="searchPlaces($event)"
-      (sortPlacesEvent)="sortPlaces($event)"
-      (fliterPlacesEvent)="filterPlaces($event)"
+      (selectedOptionsEvent)="handleSelectedOptionsEvent($event)"
     ></app-side-bar>
   </div>
   <div class="places-container">
