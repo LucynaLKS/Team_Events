@@ -1,7 +1,6 @@
 //
 /// <reference types="cypress" />
 
-import { on } from "events";
 import { onNavigationSidebar } from "../../support/page_objects/navigationSidebar"
 
 describe("Side-bar test with Page Object Pattern", () => {
@@ -15,6 +14,5 @@ describe("Side-bar test with Page Object Pattern", () => {
         onNavigationSidebar.searchWord()
         onNavigationSidebar.dropdownPage()
       });
-
 
 });
