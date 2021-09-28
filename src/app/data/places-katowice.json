@@ -13,7 +13,7 @@
   {
     "Id": 2,
     "Name": "Quest Cage Escape Room",
-    "Rating": 5,
+    "Rating": 4.5,
     "Address": "Katowice, Dębowa 65/5",
     "Phone": "794 780 888",
     "Link": "https://questcage.pl",
@@ -24,7 +24,7 @@
   {
     "Id": 3,
     "Name": "Next Room Katowice",
-    "Rating": 5,
+    "Rating": 4,
     "Address": "Katowice, ul. Sowińskiego 5A",
     "Phone": "733 100 229",
     "Link": "http://nextescaperoom.pl",
@@ -112,7 +112,7 @@
   {
     "Id": 11,
     "Name": "Flyspot - Katowice Indoor Skydiving",
-    "Rating": 5,
+    "Rating": 3.5,
     "Address": "Katowice, Chorzowska 100",
     "Phone": "698 626 500",
     "Link": "https://www.flyspot.com/pl/",
@@ -211,7 +211,7 @@
   {
     "Id": 20,
     "Name": "Energy 2000",
-    "Rating": 4,
+    "Rating": 3.5,
     "Address": "Katowice, Plebiscytowa 3",
     "Phone": "885044912",
     "Link": "https://katowice.energy2000.pl/",
