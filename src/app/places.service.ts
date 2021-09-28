@@ -39,6 +39,10 @@ export class PlacesService {
     }
 
     return this.places;
+
+    if (selectedOptions.checkedTags) {
+      this.checkedTags;
+    }
   }
 
   sortPlaces(selectedOption: string) {

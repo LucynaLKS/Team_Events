@@ -62,7 +62,7 @@
     "Phone": "32 779 93 00",
     "Link": "https://muzeumslaskie.pl/pl/",
     "Max_persons": "150",
-    "Tag": ["Museum"],
+    "Tag": ["museum"],
     "Description": "Muzeum Śląskie jest muzeum regionalnym, instytucją kultury współprowadzoną przez Urząd Marszałkowski Województwa Śląskiego i Ministerstwo Kultury, Dziedzictwa Narodowego i Sportu."
   },
   {
@@ -95,7 +95,7 @@
     "Phone": "32 4130890",
     "Link": "http://www.muzeumkomputerow.edu.pl/",
     "Max_persons": "35",
-    "Tag": ["Museum"],
+    "Tag": ["museum"],
     "Description": "Odwiedzając nasze wystawy, przeżyją Państwo niebywałą podróż w czasie - nasza ekspozycja przeniesie Was w czasie o ponad 40 lat w przeszłość. Trzeba jednak zdawać sobie sprawę, że 40 lat w Informatyce to kilka wieków w Architekturze."
   },
   {

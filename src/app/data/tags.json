@@ -1,0 +1,26 @@
+[
+  {
+    "code": "activity",
+    "label": "Aktywność"
+  },
+  {
+    "code": "drink",
+    "label": "Picie"
+  },
+  {
+    "code": "food",
+    "label": "Jedzenie"
+  },
+  {
+    "code": "dance",
+    "label": "Taniec"
+  },
+  {
+    "code": "museum",
+    "label": "Muzeum"
+  },
+  {
+    "code": "outside",
+    "label": "Na zewnątrz"
+  }
+]
