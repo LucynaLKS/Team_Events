@@ -7,7 +7,7 @@
     "Phone": "731 403 30",
     "Link": "https://questcage.pl",
     "Max_persons": "10",
-    "Tag": ["Activity"],
+    "Tag": ["activity"],
     "Description": "Escape rooms, zwane również pokojami zagadek - miejsce, w którym poczujesz się, jak bohater. Jest to dziedzina rozrywki, która zapewnia niezapomniane przeżycia i stanowi świetną formę spędzania czasu. Każdy pokój to inna historia osadzona w konkretnej kategorii, którą można dobrać do własnych preferencji."
   },
   {
@@ -18,7 +18,7 @@
     "Phone": "794 780 888",
     "Link": "https://questcage.pl",
     "Max_persons": "10",
-    "Tag": ["Activity"],
+    "Tag": ["activity"],
     "Description": "Escape rooms, zwane również pokojami zagadek - miejsce, w którym poczujesz się, jak bohater. Jest to dziedzina rozrywki, która zapewnia niezapomniane przeżycia i stanowi świetną formę spędzania czasu. Każdy pokój to inna historia osadzona w konkretnej kategorii, którą można dobrać do własnych preferencji."
   },
   {
@@ -29,7 +29,7 @@
     "Phone": "733 100 229",
     "Link": "http://nextescaperoom.pl",
     "Max_persons": "6",
-    "Tag": ["Activity"],
+    "Tag": ["activity"],
     "Description": "Escape rooms, zwane również pokojami zagadek - miejsce, w którym poczujesz się, jak bohater. Jest to dziedzina rozrywki, która zapewnia niezapomniane przeżycia i stanowi świetną formę spędzania czasu. Każdy pokój to inna historia osadzona w konkretnej kategorii, którą można dobrać do własnych preferencji."
   },
   {
@@ -40,7 +40,7 @@
     "Phone": "(32) 359 59 81",
     "Link": "http://www.gravitacja.pl/start-katowice",
     "Max_persons": "12",
-    "Tag": ["Activity", "Drink", "Food"],
+    "Tag": ["activity", "drink", "food"],
     "Description": "Kręgle, Bilard, Spotkania towarzyskie"
   },
   {
@@ -51,7 +51,7 @@
     "Phone": "502-483-920",
     "Link": "https://clubgarage.pl",
     "Max_persons": "400",
-    "Tag": ["Activity", "Dance", "Drink", "Food"],
+    "Tag": ["activity", "dance", "drink", "food"],
     "Description": "Garage to Klub Muzyczny, Klub Bilardowy i Kręgielnia w jednym miejscu! Nowoczesny kompleks dla wymagających klubowiczów."
   },
   {
@@ -73,7 +73,7 @@
     "Phone": "572 955 975",
     "Link": "https://www.jumpworld.pl/pl/katowice/",
     "Max_persons": "80",
-    "Tag": ["Activity"],
+    "Tag": ["activity"],
     "Description": "Największa sieć Parków trampolin w Polsce. Posiada różne strefy takie jak strefa ogólna, strefa siatkówki, basketu, dodgeball, tor przeszkód itp."
   },
   {
@@ -84,7 +84,7 @@
     "Phone": "(32) 229 00 21",
     "Link": "https://laserhouse.pl/",
     "Max_persons": "20",
-    "Tag": ["Activity"],
+    "Tag": ["activity"],
     "Description": "Laserowe Centrum Rozrywki"
   },
   {
@@ -106,7 +106,7 @@
     "Phone": "(32) 781 88 84",
     "Link": "https://katowice.jumpcity.pl",
     "Max_persons": "100",
-    "Tag": ["Activity", "Food"],
+    "Tag": ["activity", "food"],
     "Description": "JUMPCITY to największy park trampolin na Śląsku! Posiadamy olbrzymi basen z gąbkami, największą trampolinę sportową na południu Polski, ścieżki akrobatyczne, trampoliny z koszami do ćwiczenia wsadów, arenę do zbijaka, strefę gladiatorów i specjalną strefę dla najmłodszych"
   },
   {
@@ -117,7 +117,7 @@
     "Phone": "698 626 500",
     "Link": "https://www.flyspot.com/pl/",
     "Max_persons": "10",
-    "Tag": ["Activity"],
+    "Tag": ["activity"],
     "Description": "Flyspot to najlepszy wybór na nietuzinkowy event. Stworzyliśmy miejsce, które łączy profesjonalizm z zabawą w dobrym stylu. Spełnianie marzeń o lataniu, sportowa rywalizacja, ekstremalne emocje."
   },
   {
@@ -128,7 +128,7 @@
     "Phone": "790 212 592",
     "Link": "https://vinotekakatowice.business.site",
     "Max_persons": "40",
-    "Tag": ["Drink", "Food"],
+    "Tag": ["drink", "food"],
     "Description": "Winiarnia - ogromny wybór przepysznych win i świetny klimat, który urzeka każdego klienta."
   },
   {
@@ -139,7 +139,7 @@
     "Phone": "618 121 193",
     "Link": "http://cybermachina.pl",
     "Max_persons": "100",
-    "Tag": ["Drink", "Activity"],
+    "Tag": ["drink", "activity"],
     "Description": "Cybermachina to bar dla graczy od graczy. Możesz zagrać u nas na konsoli, w planszówkę, napić się mikstury życia lub smoczego piwa. Organizujemy turnieje, geekowe quizy, cosplay party, spotkania branżowe i naprawdę wiele, wiele więcej."
   },
   {
@@ -150,7 +150,7 @@
     "Phone": "327337867",
     "Link": "https://squashok.pl/",
     "Max_persons": "20",
-    "Tag": ["Activity"],
+    "Tag": ["activity"],
     "Description": "Największy i najlepszy punkt SQUASHA na Śląsku"
   },
   {
@@ -161,7 +161,7 @@
     "Phone": "997 / 478512222",
     "Link": "https://slaska.policja.gov.pl/",
     "Max_persons": "100",
-    "Tag": ["Activity", "Drink"],
+    "Tag": ["activity", "drink"],
     "Description": "Klimatyczne miejsce gdzie można porozmawiać z ciekawymi ludźmi i dowiedzieć się więcej o najbardziej szanowanym zawodzie świata"
   },
   {
@@ -172,7 +172,7 @@
     "Phone": "-",
     "Link": "https://www.facebook.com/sztauwajery/",
     "Max_persons": "50",
-    "Tag": ["Drink", "Food"],
+    "Tag": ["drink", "food"],
     "Description": "Ogródek piwny przy stawie z okazjonalną muzyką na żywo."
   },
   {
@@ -183,7 +183,7 @@
     "Phone": "327882465",
     "Link": "https://brynow.wodociagi.katowice.pl/",
     "Max_persons": ">150",
-    "Tag": ["Activity"],
+    "Tag": ["activity"],
     "Description": "Basen na Brynowie oferuje basen olimpijski, rekreacyjny, sauny, zjeżdżalnię czy salę gimnastyczną."
   },
   {
@@ -194,7 +194,7 @@
     "Phone": "660 955 451",
     "Link": "http://www.interskills.pl",
     "Max_persons": "100",
-    "Tag": ["Activity", "Food", "Outside"],
+    "Tag": ["activity", "food", "outside"],
     "Description": "Paintball, strzelnica, Gry scenariuszowe (LARP-y), Imprezy na wodzie, Imprezy w powietrzu, Imprezy sprawnościowe, Orienteering miejski"
   },
   {
@@ -205,7 +205,7 @@
     "Phone": "530 754 766",
     "Link": "https://oldcuban.com.pl",
     "Max_persons": "20",
-    "Tag": ["Drink", "Food"],
+    "Tag": ["drink", "food"],
     "Description": "Cocktail bar i Tapas bar w jednym z przemiłą atmosferą"
   },
   {
@@ -216,7 +216,7 @@
     "Phone": "885044912",
     "Link": "https://katowice.energy2000.pl/",
     "Max_persons": ">150",
-    "Tag": ["Activity", "Dance", "Drink"],
+    "Tag": ["activity", "dance", "drink"],
     "Description": "Klub z 3 zróżnicowanymi salami, wieloma barami oraz potężnym nagłośnieniem."
   },
   {
@@ -227,7 +227,7 @@
     "Phone": "798299699",
     "Link": "https://www.blokatowice.pl/",
     "Max_persons": "50",
-    "Tag": ["Activity"],
+    "Tag": ["activity"],
     "Description": "Klimatyczna bulderownia w Katowicach. Ściana wspinaczkowa, na której możesz wspinać się bez liny i dodatkowego sprzętu. Setki baldów. Profesjonalny materac i ściany systemowe"
   },
   {
@@ -238,7 +238,7 @@
     "Phone": "575996559",
     "Link": "http://www.muchowiec.pl/",
     "Max_persons": "20",
-    "Tag": ["Activity"],
+    "Tag": ["activity"],
     "Description": "Korty tenisowe Muchowiec to zdecydowanie jeden z najpiękniejszych ośrodków tenisowych w Polsce. Usytuowany jest niedaleko centrum Katowic na terenie malowniczej Doliny Trzech Stawów."
   },
   {
@@ -249,7 +249,7 @@
     "Phone": "883 995 737",
     "Link": "http://www.primeklub.pl/klub/",
     "Max_persons": "160",
-    "Tag": ["Music", "Drink", "Food"],
+    "Tag": ["music", "drink", "food"],
     "Description": "Klub Prime to nietuzinkowe, kulturalno-rozrywkowe miejsce na mapie śląska"
   },
   {
@@ -260,7 +260,7 @@
     "Phone": "Brak",
     "Link": "https://m.facebook.com/HarnasBarSpotted/?locale2=pl_PL",
     "Max_persons": "50",
-    "Tag": ["Activity", "Drink", "Food"],
+    "Tag": ["activity", "drink", "food"],
     "Description": "Bar Harnaś to miejsce dla odważnych czynne 24h na dobę"
   },
   {
@@ -271,7 +271,7 @@
     "Phone": " 732 519 519",
     "Link": "https://katowice.pizzerianocna.pl",
     "Max_persons": "25",
-    "Tag": ["Drink", "Food"],
+    "Tag": ["drink", "food"],
     "Description": "Nocna pizza dla głodnych wrażeń. Nasza pizzeria to idealny wybór dla wszystkich tych, którzy uwielbiają wysokiej jakości pizzę i inne przekąski. Dostawa jedzenia w nocy? U nas to możliwe!"
   },
   {
@@ -282,7 +282,7 @@
     "Phone": "32 206 82 34",
     "Link": "https://katobluebox.wixsite.com/blueboxL",
     "Max_persons": "100",
-    "Tag": ["Music", "Dance", "Drink", "Food"],
+    "Tag": ["music", "dance", "drink", "food"],
     "Description": "BLUE BOX to świetne miejsce startowe przed weekendową zabawą w innych luksusowych klubach Katowic"
   },
   {
@@ -293,7 +293,7 @@
     "Phone": "535 084 666",
     "Link": "https://zurownia.pl",
     "Max_persons": "35",
-    "Tag": ["Drink", "Food"],
+    "Tag": ["drink", "food"],
     "Description": "Tradycyjne śląskie dania i piwo w restauracji o industrialnym wystroju."
   },
   {
@@ -304,7 +304,7 @@
     "Phone": "32 351 07 70",
     "Link": "http://oi.katowice.pl",
     "Max_persons": "35",
-    "Tag": ["Activity", "Drink"],
+    "Tag": ["activity", "drink"],
     "Description": "Miejsce cechujące się spokojem i przyjemną atmosferą, idealne na zatrzymanie się na parę godzin po imprezie :)"
   }
 ]
