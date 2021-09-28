@@ -9,7 +9,7 @@ describe("Side-bar test with Page Object Pattern", () => {
       cy.visit("/");
     });
 
-    it(" ", () => {
+    it("Navigation sidebar should be working", () => {
         onNavigationSidebar.assertRating(2, 4)
         onNavigationSidebar.searchWord()
         onNavigationSidebar.dropdownPage()
