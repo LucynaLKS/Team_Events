@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
+import { TagInterface } from '../filter-tags/filter-tags.component';
 import { SearchInterface } from '../search/search.component';
 import { RangeInterface } from '../slider/slider.component';
 import { userChangeEventInterface } from '../sorting/sorting.component';
@@ -10,6 +10,7 @@ export interface SelectedOptionsInterface {
   searchPlaces: string;
   sortPlaces: string;
   filterPlacesByRating: RangeInterface;
+  filterPlacesByTags: TagInterface;
 }
 
 @Component({
@@ -28,6 +29,7 @@ export class SideBarComponent implements OnInit {
       from: 0,
       to: 5,
     },
+    filterPlacesByTags: [],
   };
 
   constructor(private route: ActivatedRoute) {}
@@ -52,6 +54,11 @@ export class SideBarComponent implements OnInit {
 
   filterPlacesByRating(event: RangeInterface) {
     this.selectedOptions.filterPlacesByRating = event;
+    this.selectedOptionsEvent.emit(this.selectedOptions);
+  }
+
+  filterPlacesByTags(event: TagInterface) {
+    this.selectedOptions.filterPlacesByTags = event;
     this.selectedOptionsEvent.emit(this.selectedOptions);
   }
 }
