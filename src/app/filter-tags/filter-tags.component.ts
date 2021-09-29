@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { TagsService } from '../tags.service';
+import { Tag } from 'src/models/tag';
 
 @Component({
   selector: 'app-filter-tags',
@@ -6,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filter-tags.component.scss'],
 })
 export class FilterTagsComponent implements OnInit {
-  constructor() {}
+  constructor(private tagsService: TagsService) {}
 
   ngOnInit(): void {}
+
+  getTags(): Tag[] {
+    return this.tagsService.getTags()
+  }
 }
