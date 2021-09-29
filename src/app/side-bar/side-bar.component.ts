@@ -6,6 +6,7 @@ import { RangeInterface } from '../slider/slider.component';
 import { userChangeEventInterface } from '../sorting/sorting.component';
 
 export interface SelectedOptionsInterface {
+  // checkedTags: string;
   searchPlaces: string;
   sortPlaces: string;
   filterPlacesByRating: RangeInterface;

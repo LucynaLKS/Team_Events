@@ -43,8 +43,9 @@ export class PlacesComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  getLabelForTag() {
-    this.tags = this.tagsService.getLabelFromCode();
+  getLabelForTag(tag: string) {
+
+   return this.tagsService.getLabelFromCode(tag);
   }
 
   showAd(index: number): boolean {

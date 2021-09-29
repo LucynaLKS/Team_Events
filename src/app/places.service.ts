@@ -5,6 +5,7 @@ import { RangeInterface } from './slider/slider.component';
 import { SearchInterface } from './search/search.component';
 import { SelectedOptionsInterface } from './side-bar/side-bar.component';
 import { Router } from '@angular/router';
+// import { TagsService } from './tags.service';
 
 @Injectable({
   providedIn: 'root',
@@ -40,9 +41,9 @@ export class PlacesService {
 
     return this.places;
 
-    if (selectedOptions.checkedTags) {
-      this.checkedTags;
-    }
+    // if (selectedOptions.checkedTags) {
+    //   this.checkedTags;
+    // }
   }
 
   sortPlaces(selectedOption: string) {
@@ -72,6 +73,10 @@ export class PlacesService {
         .includes(options.searchText.trim().toLowerCase());
     });
   }
+
+  // checkedTags() {
+  //   this.tags = this.checkedTags.filter((tag: Tags))
+  // }
 
   ratingFromHigh() {
     this.places = this.places.sort((a, b) =>
