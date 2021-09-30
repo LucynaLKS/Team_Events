@@ -1,10 +1,6 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { TagsService } from '../tags.service';
 import { Tag } from 'src/models/tag';
-
-export interface TagInterface {
-  selectedTags: Tag[];
-}
 
 @Component({
   selector: 'app-filter-tags',
@@ -12,7 +8,11 @@ export interface TagInterface {
   styleUrls: ['./filter-tags.component.scss'],
 })
 export class FilterTagsComponent implements OnInit {
-  selectedTags: Tag[] = [];
+  @Output() userChangeEvent: EventEmitter<string[]> = new EventEmitter<
+    string[]
+  >();
+
+  selectedTags: string[] = [];
   constructor(private tagsService: TagsService) {}
 
   ngOnInit(): void {}
@@ -21,9 +21,10 @@ export class FilterTagsComponent implements OnInit {
     if (isChecked) {
       this.selectedTags.push(code);
     } else {
-      const index = this.selectedTags.findIndex((x) => x.code === code);
+      const index = this.selectedTags.indexOf(code);
       this.selectedTags.splice(index, 1);
     }
+    this.userChangeEvent.emit(this.selectedTags);
   }
 
   getTags(): Tag[] {

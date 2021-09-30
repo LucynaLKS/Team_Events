@@ -11,4 +11,6 @@
   class="sorting"
   (userChangeEvent)="sortPlaces($event)"
 ></app-sorting>
-<app-filter-tags></app-filter-tags>
+<app-filter-tags
+  (userChangeEvent)="filterPlacesByTags($event)"
+></app-filter-tags>

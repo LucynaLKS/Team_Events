@@ -39,11 +39,11 @@ export class PlacesService {
       this.sortPlaces(selectedOptions.sortPlaces);
     }
 
-    return this.places;
+    if (selectedOptions.checkedTags.length > 0) {
+      this.getFilteredPlacesByTags(selectedOptions.checkedTags);
+    }
 
-    // if (selectedOptions.checkedTags) {
-    //   this.checkedTags;
-    // }
+    return this.places;
   }
 
   sortPlaces(selectedOption: string) {
@@ -74,9 +74,16 @@ export class PlacesService {
     });
   }
 
-  // checkedTags() {
-  //   this.tags = this.checkedTags.filter((tag: Tags))
-  // }
+  getFilteredPlacesByTags(selectedTags: string[]) {
+    this.places = this.places.filter((place: Place) => {
+      const containsTag = selectedTags.some((tag) => place.Tag.includes(tag));
+      if (containsTag) {
+        return place;
+      } else {
+        return false;
+      }
+    });
+  }
 
   ratingFromHigh() {
     this.places = this.places.sort((a, b) =>
