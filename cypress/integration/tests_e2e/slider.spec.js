@@ -74,7 +74,7 @@ describe("Slider with assertion", () => {
       .should("have.attr", "aria-valuetext", "0");
     cy.get("[data-test='card-title']").should(
       "contain",
-      "Komenda Wojewódzka Policji w Katowicach"
+      "Komenda Wojewódzka Policji Katowice"
     );
 
     cy.get('[data-test="slider"] .ngx-slider-pointer-max')
