@@ -1,0 +1,13 @@
+<p>Filtrowanie tagów:</p>
+
+<div *ngFor="let tag of getTags()">
+  <mat-checkbox
+    class="checkbox-tags"
+    color="primary"
+    selected
+    class="tag"
+    (change)="onChange(tag.code, $event.checked)"
+  >
+    {{ tag.label }}
+  </mat-checkbox>
+</div>

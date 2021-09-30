@@ -38,6 +38,10 @@ export class PlacesService {
       this.sortPlaces(selectedOptions.sortPlaces);
     }
 
+    if (selectedOptions.checkedTags.length > 0) {
+      this.getFilteredPlacesByTags(selectedOptions.checkedTags);
+    }
+
     return this.places;
   }
 
@@ -66,6 +70,17 @@ export class PlacesService {
       return place.Name.toLowerCase()
         .split(' ')
         .includes(options.searchText.trim().toLowerCase());
+    });
+  }
+
+  getFilteredPlacesByTags(selectedTags: string[]) {
+    this.places = this.places.filter((place: Place) => {
+      const containsTag = selectedTags.some((tag) => place.Tag.includes(tag));
+      if (containsTag) {
+        return place;
+      } else {
+        return false;
+      }
     });
   }
 

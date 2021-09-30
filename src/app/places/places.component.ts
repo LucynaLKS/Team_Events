@@ -2,6 +2,8 @@ import { Component, Input, OnInit, Output } from '@angular/core';
 import { PlacesService } from '../places.service';
 import { Place } from '../../models/place';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TagsService } from '../tags.service';
+import { Tag } from '../../models/tag';
 
 interface Sort {
   value: string;
@@ -22,6 +24,9 @@ export class PlacesComponent implements OnInit {
   @Input()
   places: Place[] = [];
 
+  @Input()
+  tags: Tag[] = [];
+
   adIndex: number[] = [1];
 
   sort: Sort[] = [
@@ -34,13 +39,14 @@ export class PlacesComponent implements OnInit {
 
   selectedSort = this.sort[0].value;
 
-  constructor(
-    private PlacesService: PlacesService,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {}
+  constructor(private tagsService: TagsService) {}
 
   ngOnInit(): void {}
+
+  getLabelForTag(tag: string) {
+
+   return this.tagsService.getLabelFromCode(tag);
+  }
 
   showAd(index: number): boolean {
     return this.adIndex.includes(index);

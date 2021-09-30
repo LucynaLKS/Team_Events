@@ -23,6 +23,8 @@ import { SearchComponent } from './search/search.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { SortingComponent } from './sorting/sorting.component';
 import { AdsComponent } from './ads/ads.component';
+import { FilterTagsComponent } from './filter-tags/filter-tags.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { AdsComponent } from './ads/ads.component';
     SideBarComponent,
     SortingComponent,
     AdsComponent,
+    FilterTagsComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +54,7 @@ import { AdsComponent } from './ads/ads.component';
     NgxSliderModule,
     MatInputModule,
     MatIconModule,
+    MatCheckboxModule,
   ],
 
   providers: [],
