@@ -74,9 +74,6 @@ export class  NavigationSidebar{
         cy.get('[data-test="input-search"]')
         .type("KATOWICE")
         cy.get('.search-button').click()
-        cy.get('.page').should("contain", "Znalezione miejsca: 2")
-        cy.get('[data-test=card-title]').should('contain', 'Next Room Katowice')
-        .and('contain', 'Flyspot - Katowice Indoor Skydiving')
       }
 
     //   This method is for sort selected from dropdown
@@ -84,10 +81,15 @@ export class  NavigationSidebar{
         
         cy.get('[data-test="sort-select"]').click();
         cy.get('[data-test="sort-option"]').contains('Z-A').click();
-        cy.get('.title').should("contain", "Next Room Katowice");
-  
       }
+
+      // This method filters Tags
+      tags() {
+        
+        cy.get('[data-test="checkbox-tags-filter"]').contains('Aktywność').click()
+        cy.get('[data-test="checkbox-tags-filter"]').contains('Picie').click()
     }
+  }
     
     export const onNavigationSidebar = new NavigationSidebar();
     
