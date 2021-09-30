@@ -22,5 +22,9 @@
   {
     "code": "outside",
     "label": "Na zewnątrz"
+  },
+  {
+    "code": "music",
+    "label": "Muzyka"
   }
 ]

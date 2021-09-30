@@ -15,7 +15,7 @@ export class Slider {
         } else {
           if (currentValue > targetMinValue) {
             const stepRepeat = (currentValue - targetMinValue) / step;
-            cy.wrap($currentObject).type("{leftarrow}".repeat(stepRepeat));
+            cy.wrap($currentObject).type("{leftarrow}".repeat(stepRepeat)).wait(2000);
           }
         }
         cy.wrap($currentObject).should(
@@ -42,7 +42,7 @@ export class Slider {
         } else {
           if (currentValue > targetMaxValue) {
             const stepRepeat = (currentValue - targetMaxValue) / step;
-            cy.wrap($currentObject).type("{leftarrow}".repeat(stepRepeat));
+            cy.wrap($currentObject).type("{leftarrow}".repeat(stepRepeat)).wait(2000);
           }
         }
         cy.wrap($currentObject).should(

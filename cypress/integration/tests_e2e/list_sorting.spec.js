@@ -23,7 +23,7 @@ describe("List sorting", () => {
 
     cy.get('[data-test="sort-select"]').click();
     cy.get('[data-test="sort-option"]').contains('Ocena od najniższej').click();
-    cy.get('.title').should("contain", "Komenda Wojewódzka Policji w Katowicach");
+    cy.get('.title').should("contain", "Komenda Wojewódzka Policji Katowice");
 
     cy.get('[data-test="sort-select"]').click();
     cy.get('[data-test="sort-option"]').contains('Brak').click();

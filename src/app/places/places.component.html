@@ -37,6 +37,7 @@
               Maks. liczba osób: {{ place.Max_persons }}
               <mat-chip-list>
                 <mat-chip
+                  data-test="chip-tag"
                   *ngFor="let tag of place.Tag"
                   color="primary"
                   selected

@@ -36,9 +36,8 @@ describe("Searching places", () => {
         cy.get('[data-test="input-search"]')
         .type("KATOWICE")
         cy.get('.search-button').click()
-        cy.get('.page').should("contain", "Znalezione miejsca: 2")
-        cy.get('[data-test=card-title]').should('contain', 'Next Room Katowice')
-        .and('contain', 'Flyspot - Katowice Indoor Skydiving')
+        cy.get('.page').should("contain", "Znalezione miejsca: 7")
+        cy.get('[data-test=card-title]').should('contain', 'Katowice')
     });
   
     it("Searching for an unexisting word by entering lowercase ", () => {

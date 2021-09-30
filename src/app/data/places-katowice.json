@@ -12,8 +12,8 @@
   },
   {
     "Id": 2,
-    "Name": "Quest Cage Escape Room",
-    "Rating": 4.5,
+    "Name": "Quest Cage Escape Room Katowice",
+    "Rating": 4,
     "Address": "Katowice, Dębowa 65/5",
     "Phone": "794 780 888",
     "Link": "https://questcage.pl",
@@ -34,7 +34,7 @@
   },
   {
     "Id": 4,
-    "Name": "Centrum Rozrywki Grawitacja",
+    "Name": "Centrum Rozrywki Grawitacja Katowice",
     "Rating": 4,
     "Address": "Katowice, Gliwicka 44",
     "Phone": "(32) 359 59 81",
@@ -45,8 +45,8 @@
   },
   {
     "Id": 5,
-    "Name": "Club Garage",
-    "Rating": 4.5,
+    "Name": "Club Garage Katowice",
+    "Rating": 4,
     "Address": "Katowice, Dąbrówki 10",
     "Phone": "502-483-920",
     "Link": "https://clubgarage.pl",
@@ -100,8 +100,8 @@
   },
   {
     "Id": 10,
-    "Name": "JUMPCITY",
-    "Rating": 4.5,
+    "Name": "JUMPCITY Katowice",
+    "Rating": 4,
     "Address": "Katowice, Kościuszki 227",
     "Phone": "(32) 781 88 84",
     "Link": "https://katowice.jumpcity.pl",
@@ -155,7 +155,7 @@
   },
   {
     "Id": 15,
-    "Name": "Komenda Wojewódzka Policji w Katowicach",
+    "Name": "Komenda Wojewódzka Policji Katowice",
     "Rating": 0.5,
     "Address": "Katowice, Lompy 19",
     "Phone": "997 / 478512222",

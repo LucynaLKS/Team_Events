@@ -11,7 +11,7 @@ export class NavigationPage{
                     "A-Z": "BLOKatowice",
                     "Z-A": "Żurownia",
                     "Ocena od najwyższej": "Quest Cage Escape Room",
-                    "Ocena od najniższej": "Komenda Wojewódzka Policji w Katowicach"
+                    "Ocena od najniższej": "Komenda Wojewódzka Policji Katowice"
                 }
 
                 cy.wrap(listItem).click()
