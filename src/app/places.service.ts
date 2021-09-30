@@ -5,7 +5,6 @@ import { RangeInterface } from './slider/slider.component';
 import { SearchInterface } from './search/search.component';
 import { SelectedOptionsInterface } from './side-bar/side-bar.component';
 import { Router } from '@angular/router';
-// import { TagsService } from './tags.service';
 
 @Injectable({
   providedIn: 'root',
